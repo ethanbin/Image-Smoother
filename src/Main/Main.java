@@ -6,9 +6,11 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 public class Main {
+
     public static void main(String[] args) {
         BufferedImage image;
         try {
+            OrderStatistic.testAndPrint();
             // open image
             File input = new File("butterfly.jpg");
             image = ImageIO.read(input);
