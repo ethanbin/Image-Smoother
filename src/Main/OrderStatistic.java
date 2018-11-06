@@ -60,7 +60,11 @@ public abstract class OrderStatistic {
         fw.close();
     }
 
-    public static void testAndPrint() throws IOException {
+    /**
+     * Test the order statistic methods speed under different
+     * @return true if test results printed to file
+     */
+    public static boolean testAndPrint() {
         double[][] results = new double[RANGE.length][SIZES.length];
         // loop going through each SIZE
         for (int i = 0; i < RANGE.length; i++) {
@@ -82,10 +86,17 @@ public abstract class OrderStatistic {
                 results[i][j] = average;
             }
         }
-        printResults(results);
+        try {
+            printResults(results);
+            return true;
+        }
+        catch (Exception e){
+            return false;
+        }
     }
 
     public static int orderStatistic(int arr[], int k){
+        // will use pivot sort or dual pivot sort depending on Java version
         Arrays.sort(arr);
         return arr[k];
     }
