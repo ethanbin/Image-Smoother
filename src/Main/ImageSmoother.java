@@ -54,26 +54,6 @@ public class ImageSmoother {
         int medianGrayscale = OrderStatistic.orderStatistic(values, values.length/2);
         return new Color(medianGrayscale, medianGrayscale, medianGrayscale);
     }
-
-    private static Color getMedianPixel2(BufferedImage image){
-        //int[] values = new int[image.getWidth() * image.getWidth()];
-        List<Integer> values = new ArrayList<>();
-        for (int i = 0; i < image.getHeight(); i++) {
-            for (int j = 0; j < image.getWidth(); j++) {
-                Color color = new Color(image.getRGB(j,i));
-                // get grayscale value
-                //values[j + i*j] = (color.getRed() + color.getGreen() + color.getBlue())/3;
-                values.add((color.getRed() + color.getGreen() + color.getBlue())/3);
-            }
-        }
-        values.remove(values.size()/2 + 1);
-        Collections.sort(values);
-        //Arrays.sort(values);
-
-        //int grayscale = values[values.length/2];
-        int grayscale = values.get(values.size()/2);
-        return new Color(grayscale, grayscale, grayscale);
-    }
     
     public static BufferedImage smoothImage(BufferedImage image, int subsize){
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
