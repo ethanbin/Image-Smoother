@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9422378c-5af1-4ed0-a28a-245ff98a604c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.png" beforeDir="false" afterPath="$PROJECT_DIR$/out.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/ImageSmoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ImageSmoother.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,13 +23,14 @@
       <file leaf-file-name="ImageSmoother.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+            <state relative-caret-position="196">
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
                 <element signature="method#openImage#0;class#NoiseSmoother#0" />
                 <element signature="method#saveImage#0;class#NoiseSmoother#0" />
+                <element signature="method#getMedianPixel2#0;class#ImageSmoother#0" />
               </folding>
             </state>
           </provider>
@@ -233,12 +233,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541534350828</updated>
       <workItem from="1541534360198" duration="140000" />
-      <workItem from="1541534554453" duration="21433000" />
+      <workItem from="1541534554453" duration="25588000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21573000" />
+    <option name="totallyTimeSpent" value="25728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -266,7 +266,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -283,7 +283,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/ImageSmoother.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -296,6 +304,7 @@
             <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
             <element signature="method#openImage#0;class#NoiseSmoother#0" />
             <element signature="method#saveImage#0;class#NoiseSmoother#0" />
+            <element signature="method#getMedianPixel2#0;class#ImageSmoother#0" />
           </folding>
         </state>
       </provider>
@@ -334,13 +343,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+        <state relative-caret-position="196">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
             <element signature="method#openImage#0;class#NoiseSmoother#0" />
             <element signature="method#saveImage#0;class#NoiseSmoother#0" />
+            <element signature="method#getMedianPixel2#0;class#ImageSmoother#0" />
           </folding>
         </state>
       </provider>

@@ -40,18 +40,19 @@ public class ImageSmoother {
         return true;
     }
 
-    private static Color getMedianPixel(BufferedImage image){
+    private static Color getGrayscaleMedianPixel(BufferedImage image){
         int[] values = new int[image.getWidth() * image.getWidth()];
         for (int i = 0; i < image.getHeight(); i++) {
             for (int j = 0; j < image.getWidth(); j++) {
                 Color color = new Color(image.getRGB(j,i));
                 // get grayscale value
-                values[j + i*j] = (color.getRed() + color.getGreen() + color.getBlue())/3;
+                int x = j + i*j;
+                values[i*image.getWidth() + j] = (color.getRed() + color.getGreen() + color.getBlue())/3;
             }
         }
 
-        int grayscale = OrderStatistic.orderStatistic(values, values.length/2);
-        return new Color(grayscale, grayscale, grayscale);
+        int medianGrayscale = OrderStatistic.orderStatistic(values, values.length/2);
+        return new Color(medianGrayscale, medianGrayscale, medianGrayscale);
     }
 
     private static Color getMedianPixel2(BufferedImage image){
@@ -73,13 +74,13 @@ public class ImageSmoother {
         int grayscale = values.get(values.size()/2);
         return new Color(grayscale, grayscale, grayscale);
     }
-
+    
     public static BufferedImage smoothImage(BufferedImage image, int subsize){
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
         for (int i = 20; i < image.getHeight() - 20; i++) {
             for (int j = 20; j < image.getWidth() - 20; j++) {
                 BufferedImage subImage = image.getSubimage(j+subsize/2,i+subsize/2, subsize, subsize);
-                smoothedImage.setRGB(j,i, getMedianPixel(subImage).getRGB());
+                smoothedImage.setRGB(j,i, getGrayscaleMedianPixel(subImage).getRGB());
             }
         }
         return smoothedImage;
@@ -95,8 +96,8 @@ public class ImageSmoother {
             System.err.println("ERROR: NO FILE FOUND.");
             return;
         }
-        grayscaleImage(image);
-        image = smoothImage(image, 5);
-        saveImage(image, "out.png");
+        //grayscaleImage(image);
+        image = smoothImage(image, 3);
+        saveImage(image, "out1.png");
     }
 }
