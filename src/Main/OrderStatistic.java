@@ -78,7 +78,7 @@ public abstract class OrderStatistic {
                     int[] arr = randomFill(size, range);
                     int target = ThreadLocalRandom.current().nextInt(0, size);
                     long startTime = System.nanoTime();
-                    orderStatistic(arr, target);
+                    orderStatisticPivot(arr, target);
                     long finishTime = System.nanoTime();
                     average += (finishTime - startTime);
                 }
@@ -95,9 +95,28 @@ public abstract class OrderStatistic {
         }
     }
 
-    public static int orderStatistic(int arr[], int k){
+    public static int orderStatisticPivot(int arr[], int k){
         // will use pivot sort or dual pivot sort depending on Java version
         Arrays.sort(arr);
         return arr[k];
+    }
+
+    protected static int OrderStatisticSelection(int[] arr, int targetIndex) {
+        if (arr.length < 1 || targetIndex > arr.length - 1)
+            return -1;
+        for (int i = 0; i <= targetIndex; i++)
+        {
+            // Find the minimum element in unsorted array
+            int minIndex = i;
+            for (int j = i+1; j < arr.length; j++)
+                if (arr[j] < arr[minIndex])
+                    minIndex = j;
+
+            // swap minimum with current index
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+        return arr[targetIndex];
     }
 }
