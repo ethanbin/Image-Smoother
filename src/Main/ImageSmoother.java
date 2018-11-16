@@ -3,14 +3,115 @@ package Main;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.RasterFormatException;
 import java.io.File;
-import java.io.IOException;
 
 public class ImageSmoother {
+    private boolean imageExists;
+    private boolean overwritable;
     private String imageLocation;
+    private String saveLocation;
+    private BufferedImage image;
 
-    public static BufferedImage grayscaleImage(BufferedImage image){
+    public ImageSmoother(String imageLocation) {
+        this.imageLocation = imageLocation;
+        this.overwritable = false;
+        imageExists = openImage();
+    }
+
+    public ImageSmoother(String imageLocation, String saveLocation) {
+        this.imageLocation = imageLocation;
+        this.saveLocation = saveLocation;
+        this.overwritable = false;
+        imageExists = openImage();
+    }
+
+    public ImageSmoother(String imageLocation, boolean overwritable) {
+        this.overwritable = overwritable;
+        this.imageLocation = imageLocation;
+        imageExists = openImage();
+    }
+
+    public ImageSmoother(String imageLocation, String saveLocation, boolean overwritable) {
+        this.overwritable = overwritable;
+        this.imageLocation = imageLocation;
+        this.saveLocation = saveLocation;
+        imageExists = openImage();
+    }
+
+    public boolean imageExists() {
+        return imageExists;
+    }
+
+    public boolean isOverwritable() {
+        return overwritable;
+    }
+
+    public String getImageLocation() {
+        return imageLocation;
+    }
+
+    public String getSaveLocation() {
+        return saveLocation;
+    }
+
+    public void setOverwritable(boolean overwritable) {
+        this.overwritable = overwritable;
+    }
+
+    private boolean openImage() {
+        try {
+            File input = new File(imageLocation);
+            image = ImageIO.read(input);
+            return true;
+        }
+        catch (Exception e) {
+            image = null;
+            System.err.println("ERROR: Image not found.");
+            return false;
+        }
+    }
+
+    public boolean saveImage(){
+        return saveImage(saveLocation, overwritable);
+    }
+
+    // If given save location differs from current save location, keep track of
+    // this location as the default to use when using saveImage()
+    public boolean saveImage(String outPath){
+        return saveImage(outPath, this.overwritable);
+    }
+
+    public boolean saveImage(boolean overwritable){
+        return saveImage(this.saveLocation, overwritable);
+    }
+
+    // If given save location differs from current save location, keep track of
+    // this location as the default to use when using saveImage()
+    public boolean saveImage(String outPath, boolean overwrite){
+        if (saveLocation == null || saveLocation.isEmpty()){
+            System.err.println("ERROR: No image destination path given.");
+            return false;
+        }
+
+        try {
+            File output = new File(outPath);
+            if (output.exists() && !overwrite){
+                System.err.println("ERROR: Attempting to overwritable existing file when the overwriting option is off.");
+                return false;
+            }
+            else {
+                ImageIO.write(image, "png", output);
+                return true;
+            }
+        }
+        catch (Exception e){
+            System.err.println("ERROR: Could not save file.");
+            return false;
+        }
+    }
+
+    // make an image greyscale
+    public BufferedImage greyscaleImage(BufferedImage image){
         for (int j = 0; j < image.getHeight(); j++){
             for (int i = 0; i < image.getWidth(); i++){
                 Color color = new Color(image.getRGB(i,j));
@@ -22,26 +123,8 @@ public class ImageSmoother {
         return image;
     }
 
-    public static BufferedImage openImage(String path) throws IOException {
-        // open image
-        File input = new File(path);
-        return ImageIO.read(input);
-    }
-
-    public static boolean saveImage(BufferedImage image, String outPath){
-        // save file
-        try {
-            File ouptut = new File(outPath);
-            ImageIO.write(image, "png", ouptut);
-        }
-        catch (Exception e){
-            System.err.println("ERROR: Could not save file.");
-            return false;
-        }
-        return true;
-    }
-
-    public static Color[] imageToArray(BufferedImage image){
+    // get each Color (AKA pixel) in an image and place it into an array
+    private Color[] imageToArray(BufferedImage image){
         Color[] pixels = new Color[image.getWidth() * image.getWidth()];
         for (int i = 0; i < image.getHeight(); i++) {
             for (int j = 0; j < image.getWidth(); j++) {
@@ -53,7 +136,7 @@ public class ImageSmoother {
         return pixels;
     }
 
-    public static Color getMedianPixel(BufferedImage image){
+    private Color getMedianPixel(BufferedImage image){
         // put every Color in subimage into an array
         Color[] pixels = imageToArray(image);
 
@@ -82,24 +165,7 @@ public class ImageSmoother {
         return pixels[targetIndex];
     }
 
-    /* // deprecated
-    private static Color getGreyscaleMedianPixel(BufferedImage image){
-        int[] values = new int[image.getWidth() * image.getWidth()];
-        for (int i = 0; i < image.getHeight(); i++) {
-            for (int j = 0; j < image.getWidth(); j++) {
-                Color color = new Color(image.getRGB(j,i));
-                // get greyscale value
-                int x = j + i*j;
-                values[i*image.getWidth() + j] = (color.getRed() + color.getGreen() + color.getBlue())/3;
-            }
-        }
-
-        int medianGreyscale = OrderStatistic.orderStatistic(values, values.length/2);
-        return new Color(medianGreyscale, medianGreyscale, medianGreyscale);
-    }
-    */
-
-    public static BufferedImage smoothImage(BufferedImage image, int subsize){
+    public void smoothImage(int subsize){
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
         for (int i = 20; i < image.getHeight() - 20; i++) {
             for (int j = 20; j < image.getWidth() - 20; j++) {
@@ -113,21 +179,15 @@ public class ImageSmoother {
                 smoothedImage.setRGB(j,i, getMedianPixel(subImage).getRGB());
             }
         }
-        return smoothedImage;
+        image = smoothedImage;
     }
 
     public static void main(String[] args) {
-        //OrderStatistic.testAndPrint();
-        BufferedImage image;
-        try{
-            image = openImage("samples/13.png");
-        }
-        catch (IOException e){
-            System.err.println("ERROR: NO FILE FOUND.");
-            return;
-        }
-        //grayscaleImage(image);
-        image = smoothImage(image, 5);
-        saveImage(image, "samples/13-out-3.png");
+        ImageSmoother smoother = new ImageSmoother(
+                "samples/11.png",
+                "samples/11-out-5.png");
+        if (!smoother.imageExists()) return;
+        smoother.smoothImage(3);
+        smoother.saveImage();
     }
 }
