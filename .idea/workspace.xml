@@ -3,6 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9422378c-5af1-4ed0-a28a-245ff98a604c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/02.png" beforeDir="false" afterPath="$PROJECT_DIR$/samples/02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/03.png" beforeDir="false" afterPath="$PROJECT_DIR$/samples/03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/04.png" beforeDir="false" afterPath="$PROJECT_DIR$/samples/04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/samples/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/samples/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/ImageSmoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ImageSmoother.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,15 +34,32 @@
       <file leaf-file-name="ImageSmoother.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            <state relative-caret-position="232">
+              <caret line="206" column="31" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+                <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+                <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+                <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+                <element signature="method#openImage#0;class#ImageSmoother#0" />
+                <element signature="method#saveImage#2;class#ImageSmoother#0" />
                 <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
-                <element signature="method#openImage#0;class#NoiseSmoother#0" />
-                <element signature="method#saveImage#0;class#NoiseSmoother#0" />
-                <element signature="method#getMedianPixel2#0;class#ImageSmoother#0" />
+                <element signature="method#imageToArray#0;class#ImageSmoother#0" />
+                <element signature="method#getGrayscaleMedianPixel#0;class#ImageSmoother#0" />
+                <element signature="e#2465#2513#0" />
+                <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+                <element signature="e#4050#4053#0" />
+                <element signature="e#6089#6121#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="File.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/io/File.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="273" column="11" selection-start-line="273" selection-start-column="11" selection-end-line="273" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -39,10 +67,23 @@
       <file leaf-file-name="BufferedImage.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="916" selection-start-line="916" selection-end-line="916" />
+            <state relative-caret-position="221">
+              <caret line="1199" column="25" selection-start-line="1199" selection-start-column="25" selection-end-line="1199" selection-end-column="25" />
               <folding>
+                <element signature="e#37239#37240#0" expanded="true" />
                 <element signature="e#37315#37316#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderStatistic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-104">
+              <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+              <folding>
+                <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
               </folding>
             </state>
           </provider>
@@ -65,9 +106,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/Main/Sorter.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatisticsTester.java" />
-        <option value="$PROJECT_DIR$/src/Main/OrderStatistic.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/Main/NoiseSmoother.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic.java" />
         <option value="$PROJECT_DIR$/src/Main/ImageSmoother.java" />
       </list>
     </option>
@@ -233,12 +274,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541534350828</updated>
       <workItem from="1541534360198" duration="140000" />
-      <workItem from="1541534554453" duration="25588000" />
+      <workItem from="1541534554453" duration="46856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25728000" />
+    <option name="totallyTimeSpent" value="46996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -259,8 +300,9 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14901665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14901665" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -272,7 +314,6 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,15 +324,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/ImageSmoother.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -300,11 +333,19 @@
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+            <element signature="method#openImage#0;class#ImageSmoother#0" />
+            <element signature="method#saveImage#2;class#ImageSmoother#0" />
             <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#openImage#0;class#NoiseSmoother#0" />
-            <element signature="method#saveImage#0;class#NoiseSmoother#0" />
-            <element signature="method#getMedianPixel2#0;class#ImageSmoother#0" />
+            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
+            <element signature="method#getGrayscaleMedianPixel#0;class#ImageSmoother#0" />
+            <element signature="e#2465#2513#0" />
+            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+            <element signature="e#4050#4053#0" />
+            <element signature="e#6089#6121#0" />
           </folding>
         </state>
       </provider>
@@ -318,39 +359,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
+        <state relative-caret-position="-104">
+          <caret line="80" column="40" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
           <folding>
-            <element signature="docComment;method#randomFill#0;class#OrderStatisticsTester#0" />
-            <element signature="method#randomFill#0;class#Sorter#0" />
-            <element signature="method#printResults#0;class#OrderStatisticsTester#0" />
-            <element signature="e#2318#2353#0" />
             <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
-            <element signature="method#testAndPrint#0;class#OrderStatistic#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="916" selection-start-line="916" selection-end-line="916" />
+        <state relative-caret-position="221">
+          <caret line="1199" column="25" selection-start-line="1199" selection-start-column="25" selection-end-line="1199" selection-end-column="25" />
           <folding>
+            <element signature="e#37239#37240#0" expanded="true" />
             <element signature="e#37315#37316#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="273" column="11" selection-start-line="273" selection-start-column="11" selection-end-line="273" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        <state relative-caret-position="232">
+          <caret line="206" column="31" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+            <element signature="method#openImage#0;class#ImageSmoother#0" />
+            <element signature="method#saveImage#2;class#ImageSmoother#0" />
             <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#openImage#0;class#NoiseSmoother#0" />
-            <element signature="method#saveImage#0;class#NoiseSmoother#0" />
-            <element signature="method#getMedianPixel2#0;class#ImageSmoother#0" />
+            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
+            <element signature="method#getGrayscaleMedianPixel#0;class#ImageSmoother#0" />
+            <element signature="e#2465#2513#0" />
+            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+            <element signature="e#4050#4053#0" />
+            <element signature="e#6089#6121#0" />
           </folding>
         </state>
       </provider>

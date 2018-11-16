@@ -1,0 +1,8 @@
+salt and pepper noise is handled best
+high strength low amount is handled better
+
+history - NASA used this on satelite images because radiation from sun
+	creates a lot of this kind of noise.
+	Later on, someone bombed a football stadium or something and the
+	only footage of the suspect was really noisy, so the FBI has
+	NASA remove the noise.
