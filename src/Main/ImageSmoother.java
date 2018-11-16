@@ -3,10 +3,13 @@ package Main;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.image.RasterFormatException;
 import java.io.File;
 import java.io.IOException;
 
 public class ImageSmoother {
+    private String imageLocation;
+
     public static BufferedImage grayscaleImage(BufferedImage image){
         for (int j = 0; j < image.getHeight(); j++){
             for (int i = 0; i < image.getWidth(); i++){
@@ -38,8 +41,7 @@ public class ImageSmoother {
         return true;
     }
 
-    private static Color getMedianPixel(BufferedImage image){
-        // put every Color in subimage into an array
+    public static Color[] imageToArray(BufferedImage image){
         Color[] pixels = new Color[image.getWidth() * image.getWidth()];
         for (int i = 0; i < image.getHeight(); i++) {
             for (int j = 0; j < image.getWidth(); j++) {
@@ -48,6 +50,12 @@ public class ImageSmoother {
                 pixels[i*image.getWidth() + j] = color;
             }
         }
+        return pixels;
+    }
+
+    public static Color getMedianPixel(BufferedImage image){
+        // put every Color in subimage into an array
+        Color[] pixels = imageToArray(image);
 
         // calculate median index
         int targetIndex = pixels.length/2;
@@ -95,7 +103,13 @@ public class ImageSmoother {
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
         for (int i = 20; i < image.getHeight() - 20; i++) {
             for (int j = 20; j < image.getWidth() - 20; j++) {
-                BufferedImage subImage = image.getSubimage(j+subsize/2,i+subsize/2, subsize, subsize);
+                BufferedImage subImage;
+                //try {
+                    subImage = image.getSubimage(j + subsize / 2, i + subsize / 2, subsize, subsize);
+                //}
+                //catch (RasterFormatException e){
+
+                //}
                 smoothedImage.setRGB(j,i, getMedianPixel(subImage).getRGB());
             }
         }
@@ -106,14 +120,14 @@ public class ImageSmoother {
         //OrderStatistic.testAndPrint();
         BufferedImage image;
         try{
-            image = openImage("8.png");
+            image = openImage("samples/13.png");
         }
         catch (IOException e){
             System.err.println("ERROR: NO FILE FOUND.");
             return;
         }
         //grayscaleImage(image);
-        image = smoothImage(image, 3);
-        saveImage(image, "out2.png");
+        image = smoothImage(image, 5);
+        saveImage(image, "samples/13-out-3.png");
     }
 }
