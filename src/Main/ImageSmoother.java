@@ -3,6 +3,7 @@ package Main;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.image.RasterFormatException;
 import java.io.File;
 
 public class ImageSmoother {
@@ -123,6 +124,27 @@ public class ImageSmoother {
         return image;
     }
 
+    private Color fillBlank(BufferedImage image, int row, int col){
+        // if image.getRGB(row,col) != empty return image.getRGB(row,col);
+        int nextRow = row, nextCol = col;
+        if (row == 0) nextRow = row + 1;
+        else if (row == image.getHeight()) nextRow = row - 1;
+        if (col == 0) nextCol = col + 1;
+        else if (col == image.getWidth()) nextCol = col - 1;
+        Color innerColor = fillBlank(image.getSubimage(1,1,image.getWidth() - 2, image.getHeight() - 2),
+                nextRow, nextCol);
+        image.setRGB(row, col, innerColor.getRGB());
+        return innerColor;
+    }
+
+    // this method will get a subimage in the case where the required subimage is out
+    // of bounds of the original image. It will do this by copying the pixels at the
+    // available edge(s) to the places that would be out of bounds.
+    private BufferedImage getSubImageWithCopiedEdges(BufferedImage image, int x, int y, int subsize) {
+
+        return image;
+    }
+
     // get each Color (AKA pixel) in an image and place it into an array
     private Color[] imageToArray(BufferedImage image){
         Color[] pixels = new Color[image.getWidth() * image.getWidth()];
@@ -144,8 +166,7 @@ public class ImageSmoother {
         int targetIndex = pixels.length/2;
 
         // selection sort iteratively
-        for (int i = 0; i <= targetIndex; i++)
-        {
+        for (int i = 0; i <= targetIndex; i++) {
             // Find the minimum element in unsorted array
             int minIndex = i;
             for (int j = i+1; j < pixels.length; j++) {
@@ -167,15 +188,16 @@ public class ImageSmoother {
 
     public void smoothImage(int subsize){
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-        for (int i = 20; i < image.getHeight() - 20; i++) {
-            for (int j = 20; j < image.getWidth() - 20; j++) {
+        for (int i = 0; i < image.getHeight(); i++) {
+            for (int j = 0; j < image.getWidth(); j++) {
                 BufferedImage subImage;
-                //try {
+                try {
                     subImage = image.getSubimage(j + subsize / 2, i + subsize / 2, subsize, subsize);
-                //}
-                //catch (RasterFormatException e){
+                }
+                catch (RasterFormatException e){
 
-                //}
+                    subImage = getSubImageWithCopiedEdges(image, j, i, subsize);
+                }
                 smoothedImage.setRGB(j,i, getMedianPixel(subImage).getRGB());
             }
         }
@@ -184,8 +206,8 @@ public class ImageSmoother {
 
     public static void main(String[] args) {
         ImageSmoother smoother = new ImageSmoother(
-                "samples/11.png",
-                "samples/11-out-5.png");
+                "samples/image.jpg",
+                "samples/image-out-3.png");
         if (!smoother.imageExists()) return;
         smoother.smoothImage(3);
         smoother.saveImage();
