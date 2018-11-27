@@ -124,16 +124,16 @@ public class ImageSmoother {
         return image;
     }
 
-    private Color fillBlank(BufferedImage image, int row, int col){
-        // if image.getRGB(row,col) != empty return image.getRGB(row,col);
-        int nextRow = row, nextCol = col;
-        if (row == 0) nextRow = row + 1;
-        else if (row == image.getHeight()) nextRow = row - 1;
-        if (col == 0) nextCol = col + 1;
-        else if (col == image.getWidth()) nextCol = col - 1;
-        Color innerColor = fillBlank(image.getSubimage(1,1,image.getWidth() - 2, image.getHeight() - 2),
-                nextRow, nextCol);
-        image.setRGB(row, col, innerColor.getRGB());
+    private static Color fillBlank(Color[][] image, int x, int y, int leftBound, int rightBound, int topBound, int bottomBound){
+        if (image[x][y] != null) return image[x][y];
+        int nextRow = x, nextCol = y;
+        if (x == leftBound) nextRow = x + 1;
+        else if (x == rightBound) nextRow = x - 1;
+        if (y == topBound) nextCol = y + 1;
+        else if (y == bottomBound) nextCol = y - 1;
+        Color innerColor = fillBlank(image, nextRow, nextCol, leftBound + 1,
+                rightBound - 1,topBound + 1,bottomBound - 1);
+        image[x][y] = innerColor;
         return innerColor;
     }
 
@@ -141,8 +141,25 @@ public class ImageSmoother {
     // of bounds of the original image. It will do this by copying the pixels at the
     // available edge(s) to the places that would be out of bounds.
     private BufferedImage getSubImageWithCopiedEdges(BufferedImage image, int x, int y, int subsize) {
+        Color [][] pixelMatrix = new Color[subsize][subsize];
+        // calculate range of coordinates that subimage would have within image
+        int rowStart = x - subsize/2;
+        int rowEnd   = x + subsize/2;
+        int colStart = y - subsize/2;
+        int colEnd   = y + subsize/2;
+        for (int i = rowStart; i <= rowEnd; i++){
+            for (int j = colStart; j <= colEnd; j++) {
+                pixelMatrix[i][i] = new Color(image.getRGB(i,j));
+            }
+        }
+        for (int i = 0; i < 101; i++)
+            fillBlank(pixelMatrix, 0, i, 0,0, image.getHeight(), image.getWidth());
+        BufferedImage subimage = new BufferedImage(subsize, subsize, image.getType());
+        for (int i = 0; i < subsize; i++)
+            for (int j = 0; j < subsize; j++)
+                subimage.setRGB(i,j, pixelMatrix[i][j].getRGB());
 
-        return image;
+        return subimage;
     }
 
     // get each Color (AKA pixel) in an image and place it into an array
@@ -206,10 +223,13 @@ public class ImageSmoother {
 
     public static void main(String[] args) {
         ImageSmoother smoother = new ImageSmoother(
-                "samples/image.jpg",
+                "samples/butterfly.jpg",
                 "samples/image-out-3.png");
         if (!smoother.imageExists()) return;
-        smoother.smoothImage(3);
+        BufferedImage image = new BufferedImage(101, 101, BufferedImage.TYPE_INT_RGB);
+        image.setRGB(50, 50, 100000100);
+        smoother.image=image;
+        //smoother.smoothImage(3);
         smoother.saveImage();
     }
 }

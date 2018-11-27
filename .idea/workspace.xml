@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9422378c-5af1-4ed0-a28a-245ff98a604c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/ImageSmoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ImageSmoother.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,21 +23,324 @@
       <file leaf-file-name="ImageSmoother.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="140" column="8" lean-forward="true" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+            <state relative-caret-position="494">
+              <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
               <folding>
                 <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
-                <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+                <element signature="method#ImageSmoother#1;class#ImageSmoother#0" />
                 <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
-                <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+                <element signature="method#ImageSmoother#3;class#ImageSmoother#0" />
                 <element signature="method#openImage#0;class#ImageSmoother#0" />
-                <element signature="method#saveImage#2;class#ImageSmoother#0" />
-                <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
+                <element signature="method#saveImage#3;class#ImageSmoother#0" />
+                <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
+                <element signature="method#fillBlank#0;class#ImageSmoother#0" />
                 <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-                <element signature="method#getGrayscaleMedianPixel#0;class#ImageSmoother#0" />
-                <element signature="e#2465#2513#0" />
-                <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+                <element signature="method#getMedianPixel#0;class#ImageSmoother#0" />
+                <element signature="e#6159#6207#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BufferedImage.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="1088" lean-forward="true" selection-start-line="1088" selection-end-line="1088" />
+              <folding>
+                <element signature="docComment;class#BufferedImage#0" />
+                <element signature="e#2027#2190#0" />
+                <element signature="e#2241#2672#0" />
+                <element signature="e#2724#3184#0" />
+                <element signature="e#3237#3487#0" />
+                <element signature="e#3544#4088#0" />
+                <element signature="e#4140#4666#0" />
+                <element signature="e#4720#5178#0" />
+                <element signature="e#5233#5678#0" />
+                <element signature="e#5737#6182#0" />
+                <element signature="e#6241#6686#0" />
+                <element signature="e#6745#7177#0" />
+                <element signature="e#7232#7667#0" />
+                <element signature="e#7724#9010#0" />
+                <element signature="e#9067#9875#0" />
+                <element signature="initializer##0;class#BufferedImage#0" />
+                <element signature="e#10794#11525#0" />
+                <element signature="e#10794#20098#0" />
+                <element signature="e#20104#21231#0" />
+                <element signature="e#20104#23073#0" />
+                <element signature="e#23079#24592#0" />
+                <element signature="e#23079#33006#0" />
+                <element signature="e#26087#26150#0" />
+                <element signature="e#27730#27779#0" />
+                <element signature="e#33012#33841#0" />
+                <element signature="class#33392:33763" />
+                <element signature="method#run#0;class#33392:33763" />
+                <element signature="e#33847#34430#0" />
+                <element signature="e#34495#34622#0" />
+                <element signature="e#34701#34836#0" />
+                <element signature="e#34912#36027#0" />
+                <element signature="e#36134#37202#0" />
+                <element signature="e#37322#38674#0" />
+                <element signature="e#37322#40154#0" />
+                <element signature="e#40161#40891#0" />
+                <element signature="e#41028#42326#0" />
+                <element signature="e#41028#42833#0" />
+                <element signature="e#42840#42961#0" />
+                <element signature="e#43035#43158#0" />
+                <element signature="e#43234#43386#0" />
+                <element signature="e#43482#43636#0" />
+                <element signature="e#43734#43936#0" />
+                <element signature="e#43734#44203#0" />
+                <element signature="e#44210#45298#0" />
+                <element signature="e#45413#45688#0" />
+                <element signature="e#45413#46099#0" />
+                <element signature="e#46105#46438#0" />
+                <element signature="e#46528#46729#0" />
+                <element signature="e#46920#47672#0" />
+                <element signature="e#46920#48055#0" />
+                <element signature="e#48061#48297#0" />
+                <element signature="e#48403#48769#0" />
+                <element signature="e#48403#49088#0" />
+                <element signature="e#49094#49301#0" />
+                <element signature="e#49094#49477#0" />
+                <element signature="e#49483#50294#0" />
+                <element signature="e#50375#50755#0" />
+                <element signature="e#50375#51003#0" />
+                <element signature="e#51009#51207#0" />
+                <element signature="e#51279#51477#0" />
+                <element signature="e#51549#51736#0" />
+                <element signature="e#51830#51978#0" />
+                <element signature="e#52040#52188#0" />
+                <element signature="e#52250#52405#0" />
+                <element signature="e#52466#52621#0" />
+                <element signature="e#52682#52775#0" />
+                <element signature="e#52852#52947#0" />
+                <element signature="e#53026#53255#0" />
+                <element signature="e#53355#53584#0" />
+                <element signature="e#53684#54386#0" />
+                <element signature="e#53684#54638#0" />
+                <element signature="e#54644#54905#0" />
+                <element signature="e#54945#55003#0" />
+                <element signature="e#55751#56207#0" />
+                <element signature="e#55751#56944#0" />
+                <element signature="e#56950#57657#0" />
+                <element signature="e#56950#58242#0" />
+                <element signature="e#58246#58630#0" />
+                <element signature="e#58246#59544#0" />
+                <element signature="e#59280#59338#0" />
+                <element signature="e#59549#59713#0" />
+                <element signature="e#59549#59771#0" />
+                <element signature="e#59775#60038#0" />
+                <element signature="e#59775#60099#0" />
+                <element signature="e#60105#60581#0" />
+                <element signature="e#60105#60789#0" />
+                <element signature="e#60795#61153#0" />
+                <element signature="e#60795#61290#0" />
+                <element signature="e#61296#61587#0" />
+                <element signature="e#61657#62048#0" />
+                <element signature="e#62148#62680#0" />
+                <element signature="e#62148#62747#0" />
+                <element signature="e#62753#63036#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Raster.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="125" column="13" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+              <folding>
+                <element signature="docComment;class#Raster#0" />
+                <element signature="e#5253#5367#0" />
+                <element signature="e#5412#5461#0" />
+                <element signature="e#5504#5567#0" />
+                <element signature="e#5597#5660#0" />
+                <element signature="e#5690#5722#0" />
+                <element signature="e#5753#5786#0" />
+                <element signature="e#5818#5938#0" />
+                <element signature="e#5985#6105#0" />
+                <element signature="e#6152#6193#0" />
+                <element signature="e#6227#6283#0" />
+                <element signature="e#6324#6366#0" />
+                <element signature="initializer##0;class#Raster#0" />
+                <element signature="e#6518#7879#0" />
+                <element signature="e#6518#8432#0" />
+                <element signature="e#8438#10293#0" />
+                <element signature="e#8438#11404#0" />
+                <element signature="e#11410#12659#0" />
+                <element signature="e#11410#13547#0" />
+                <element signature="e#13553#15368#0" />
+                <element signature="e#13553#17330#0" />
+                <element signature="e#17336#18841#0" />
+                <element signature="e#17336#19687#0" />
+                <element signature="e#19693#21918#0" />
+                <element signature="e#19693#24621#0" />
+                <element signature="e#24627#26471#0" />
+                <element signature="e#24627#28243#0" />
+                <element signature="e#28249#29868#0" />
+                <element signature="e#28249#31793#0" />
+                <element signature="e#31799#33398#0" />
+                <element signature="e#31799#35221#0" />
+                <element signature="e#35227#36668#0" />
+                <element signature="e#35227#38155#0" />
+                <element signature="e#38162#39215#0" />
+                <element signature="e#38162#41550#0" />
+                <element signature="e#41556#42222#0" />
+                <element signature="e#41556#42525#0" />
+                <element signature="e#42531#43606#0" />
+                <element signature="e#42531#46000#0" />
+                <element signature="e#46006#46727#0" />
+                <element signature="e#46006#47106#0" />
+                <element signature="e#47112#47922#0" />
+                <element signature="e#47112#48325#0" />
+                <element signature="e#48331#49838#0" />
+                <element signature="e#48331#51279#0" />
+                <element signature="e#51286#51413#0" />
+                <element signature="e#51480#51877#0" />
+                <element signature="e#51977#52374#0" />
+                <element signature="e#52474#52739#0" />
+                <element signature="e#52474#52873#0" />
+                <element signature="e#52879#53419#0" />
+                <element signature="e#52879#53804#0" />
+                <element signature="e#53810#54593#0" />
+                <element signature="e#53810#54913#0" />
+                <element signature="e#54919#55819#0" />
+                <element signature="e#54919#56094#0" />
+                <element signature="e#56100#56950#0" />
+                <element signature="e#56100#57133#0" />
+                <element signature="e#57139#59870#0" />
+                <element signature="e#57139#61668#0" />
+                <element signature="e#60769#60835#0" />
+                <element signature="e#61674#61875#0" />
+                <element signature="e#61979#62109#0" />
+                <element signature="e#62175#62305#0" />
+                <element signature="e#62371#62475#0" />
+                <element signature="e#62543#62649#0" />
+                <element signature="e#62719#62854#0" />
+                <element signature="e#62928#63560#0" />
+                <element signature="e#63665#64346#0" />
+                <element signature="e#64445#64571#0" />
+                <element signature="e#64650#64794#0" />
+                <element signature="e#64876#66366#0" />
+                <element signature="e#64876#66643#0" />
+                <element signature="e#66649#68295#0" />
+                <element signature="e#66649#68592#0" />
+                <element signature="e#68598#69205#0" />
+                <element signature="e#68598#69450#0" />
+                <element signature="e#69456#70074#0" />
+                <element signature="e#69456#70323#0" />
+                <element signature="e#70329#70942#0" />
+                <element signature="e#70329#71193#0" />
+                <element signature="e#71199#71998#0" />
+                <element signature="e#71199#72267#0" />
+                <element signature="e#72273#73063#0" />
+                <element signature="e#72273#73365#0" />
+                <element signature="e#73371#74185#0" />
+                <element signature="e#73371#74490#0" />
+                <element signature="e#74497#75152#0" />
+                <element signature="e#74497#75387#0" />
+                <element signature="e#75393#76049#0" />
+                <element signature="e#75393#76306#0" />
+                <element signature="e#76312#76967#0" />
+                <element signature="e#76312#77229#0" />
+                <element signature="e#77235#78174#0" />
+                <element signature="e#77235#78523#0" />
+                <element signature="e#78529#79471#0" />
+                <element signature="e#78529#79788#0" />
+                <element signature="e#79794#80736#0" />
+                <element signature="e#79794#81059#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataBuffer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+              <folding>
+                <element signature="docComment;class#DataBuffer#0" />
+                <element signature="docComment;field#TYPE_BYTE#0;class#DataBuffer#0" />
+                <element signature="docComment;field#TYPE_USHORT#0;class#DataBuffer#0" />
+                <element signature="docComment;field#TYPE_SHORT#0;class#DataBuffer#0" />
+                <element signature="docComment;field#TYPE_INT#0;class#DataBuffer#0" />
+                <element signature="docComment;field#TYPE_FLOAT#0;class#DataBuffer#0" />
+                <element signature="docComment;field#TYPE_DOUBLE#0;class#DataBuffer#0" />
+                <element signature="docComment;field#TYPE_UNDEFINED#0;class#DataBuffer#0" />
+                <element signature="docComment;field#dataType#0;class#DataBuffer#0" />
+                <element signature="docComment;field#banks#0;class#DataBuffer#0" />
+                <element signature="docComment;field#offset#0;class#DataBuffer#0" />
+                <element signature="docComment;field#size#0;class#DataBuffer#0" />
+                <element signature="docComment;field#offsets#0;class#DataBuffer#0" />
+                <element signature="docComment;field#dataTypeSize#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getDataTypeSize#0;class#DataBuffer#0" />
+                <element signature="method#getDataTypeSize#0;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#0;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#1;class#DataBuffer#0" />
+                <element signature="method#DataBuffer#1;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#2;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#3;class#DataBuffer#0" />
+                <element signature="method#DataBuffer#3;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#4;class#DataBuffer#0" />
+                <element signature="method#DataBuffer#4;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#5;class#DataBuffer#0" />
+                <element signature="method#DataBuffer#5;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#6;class#DataBuffer#0" />
+                <element signature="method#DataBuffer#6;class#DataBuffer#0" />
+                <element signature="docComment;method#DataBuffer#7;class#DataBuffer#0" />
+                <element signature="method#DataBuffer#7;class#DataBuffer#0" />
+                <element signature="docComment;method#getDataType#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getSize#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getOffset#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getOffsets#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getNumBanks#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getElem#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getElem#1;class#DataBuffer#0" />
+                <element signature="docComment;method#setElem#0;class#DataBuffer#0" />
+                <element signature="docComment;method#setElem#1;class#DataBuffer#0" />
+                <element signature="docComment;method#getElemFloat#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getElemFloat#1;class#DataBuffer#0" />
+                <element signature="docComment;method#setElemFloat#0;class#DataBuffer#0" />
+                <element signature="docComment;method#setElemFloat#1;class#DataBuffer#0" />
+                <element signature="docComment;method#getElemDouble#0;class#DataBuffer#0" />
+                <element signature="docComment;method#getElemDouble#1;class#DataBuffer#0" />
+                <element signature="docComment;method#setElemDouble#0;class#DataBuffer#0" />
+                <element signature="docComment;method#setElemDouble#1;class#DataBuffer#0" />
+                <element signature="method#toIntArray#0;class#DataBuffer#0" />
+                <element signature="initializer##0;class#DataBuffer#0" />
+                <element signature="class#18845:19586" />
+                <element signature="method#setTrackable#0;class#18845:19586" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WritableRaster.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/WritableRaster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectColorModel.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DirectColorModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="720" selection-start-line="720" selection-end-line="720" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntegerInterleavedRaster.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="490">
+              <caret line="226" selection-start-line="226" selection-end-line="226" />
             </state>
           </provider>
         </entry>
@@ -44,8 +348,8 @@
       <file leaf-file-name="OrderStatistic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+            <state relative-caret-position="1717">
+              <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
               <folding>
                 <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
               </folding>
@@ -98,8 +402,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,12 +424,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -206,21 +511,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ImageSmoother" />
@@ -239,45 +529,47 @@
       <updated>1541534350828</updated>
       <workItem from="1541534360198" duration="140000" />
       <workItem from="1541534554453" duration="59040000" />
+      <workItem from="1542763227073" duration="6570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59180000" />
+    <option name="totallyTimeSpent" value="65750000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.32972136" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32972136" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32972136" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32980332" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289777" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14901665" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14882812" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info id="Learn" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.32590315" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,26 +580,56 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="140" column="8" lean-forward="true" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+          <folding>
+            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#1;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#3;class#ImageSmoother#0" />
+            <element signature="method#openImage#0;class#ImageSmoother#0" />
+            <element signature="method#saveImage#3;class#ImageSmoother#0" />
+            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
+            <element signature="method#fillBlank#0;class#ImageSmoother#0" />
+            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
+            <element signature="method#getMedianPixel#0;class#ImageSmoother#0" />
+            <element signature="e#6159#6207#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
-            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#1;class#ImageSmoother#0" />
             <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
-            <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#3;class#ImageSmoother#0" />
             <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="method#saveImage#2;class#ImageSmoother#0" />
-            <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
+            <element signature="method#saveImage#3;class#ImageSmoother#0" />
+            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
+            <element signature="method#fillBlank#0;class#ImageSmoother#0" />
             <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="method#getGrayscaleMedianPixel#0;class#ImageSmoother#0" />
-            <element signature="e#2465#2513#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+            <element signature="method#getMedianPixel#0;class#ImageSmoother#0" />
+            <element signature="e#6159#6207#0" />
           </folding>
         </state>
       </provider>
@@ -328,41 +650,321 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
+        <state relative-caret-position="1717">
+          <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
           <folding>
             <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DirectColorModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="720" selection-start-line="720" selection-end-line="720" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/WritableRaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#DataBuffer#0" />
+            <element signature="docComment;field#TYPE_BYTE#0;class#DataBuffer#0" />
+            <element signature="docComment;field#TYPE_USHORT#0;class#DataBuffer#0" />
+            <element signature="docComment;field#TYPE_SHORT#0;class#DataBuffer#0" />
+            <element signature="docComment;field#TYPE_INT#0;class#DataBuffer#0" />
+            <element signature="docComment;field#TYPE_FLOAT#0;class#DataBuffer#0" />
+            <element signature="docComment;field#TYPE_DOUBLE#0;class#DataBuffer#0" />
+            <element signature="docComment;field#TYPE_UNDEFINED#0;class#DataBuffer#0" />
+            <element signature="docComment;field#dataType#0;class#DataBuffer#0" />
+            <element signature="docComment;field#banks#0;class#DataBuffer#0" />
+            <element signature="docComment;field#offset#0;class#DataBuffer#0" />
+            <element signature="docComment;field#size#0;class#DataBuffer#0" />
+            <element signature="docComment;field#offsets#0;class#DataBuffer#0" />
+            <element signature="docComment;field#dataTypeSize#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getDataTypeSize#0;class#DataBuffer#0" />
+            <element signature="method#getDataTypeSize#0;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#0;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#1;class#DataBuffer#0" />
+            <element signature="method#DataBuffer#1;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#2;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#3;class#DataBuffer#0" />
+            <element signature="method#DataBuffer#3;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#4;class#DataBuffer#0" />
+            <element signature="method#DataBuffer#4;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#5;class#DataBuffer#0" />
+            <element signature="method#DataBuffer#5;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#6;class#DataBuffer#0" />
+            <element signature="method#DataBuffer#6;class#DataBuffer#0" />
+            <element signature="docComment;method#DataBuffer#7;class#DataBuffer#0" />
+            <element signature="method#DataBuffer#7;class#DataBuffer#0" />
+            <element signature="docComment;method#getDataType#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getSize#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getOffset#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getOffsets#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getNumBanks#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getElem#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getElem#1;class#DataBuffer#0" />
+            <element signature="docComment;method#setElem#0;class#DataBuffer#0" />
+            <element signature="docComment;method#setElem#1;class#DataBuffer#0" />
+            <element signature="docComment;method#getElemFloat#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getElemFloat#1;class#DataBuffer#0" />
+            <element signature="docComment;method#setElemFloat#0;class#DataBuffer#0" />
+            <element signature="docComment;method#setElemFloat#1;class#DataBuffer#0" />
+            <element signature="docComment;method#getElemDouble#0;class#DataBuffer#0" />
+            <element signature="docComment;method#getElemDouble#1;class#DataBuffer#0" />
+            <element signature="docComment;method#setElemDouble#0;class#DataBuffer#0" />
+            <element signature="docComment;method#setElemDouble#1;class#DataBuffer#0" />
+            <element signature="method#toIntArray#0;class#DataBuffer#0" />
+            <element signature="initializer##0;class#DataBuffer#0" />
+            <element signature="class#18845:19586" />
+            <element signature="method#setTrackable#0;class#18845:19586" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="125" column="13" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#Raster#0" />
+            <element signature="e#5253#5367#0" />
+            <element signature="e#5412#5461#0" />
+            <element signature="e#5504#5567#0" />
+            <element signature="e#5597#5660#0" />
+            <element signature="e#5690#5722#0" />
+            <element signature="e#5753#5786#0" />
+            <element signature="e#5818#5938#0" />
+            <element signature="e#5985#6105#0" />
+            <element signature="e#6152#6193#0" />
+            <element signature="e#6227#6283#0" />
+            <element signature="e#6324#6366#0" />
+            <element signature="initializer##0;class#Raster#0" />
+            <element signature="e#6518#7879#0" />
+            <element signature="e#6518#8432#0" />
+            <element signature="e#8438#10293#0" />
+            <element signature="e#8438#11404#0" />
+            <element signature="e#11410#12659#0" />
+            <element signature="e#11410#13547#0" />
+            <element signature="e#13553#15368#0" />
+            <element signature="e#13553#17330#0" />
+            <element signature="e#17336#18841#0" />
+            <element signature="e#17336#19687#0" />
+            <element signature="e#19693#21918#0" />
+            <element signature="e#19693#24621#0" />
+            <element signature="e#24627#26471#0" />
+            <element signature="e#24627#28243#0" />
+            <element signature="e#28249#29868#0" />
+            <element signature="e#28249#31793#0" />
+            <element signature="e#31799#33398#0" />
+            <element signature="e#31799#35221#0" />
+            <element signature="e#35227#36668#0" />
+            <element signature="e#35227#38155#0" />
+            <element signature="e#38162#39215#0" />
+            <element signature="e#38162#41550#0" />
+            <element signature="e#41556#42222#0" />
+            <element signature="e#41556#42525#0" />
+            <element signature="e#42531#43606#0" />
+            <element signature="e#42531#46000#0" />
+            <element signature="e#46006#46727#0" />
+            <element signature="e#46006#47106#0" />
+            <element signature="e#47112#47922#0" />
+            <element signature="e#47112#48325#0" />
+            <element signature="e#48331#49838#0" />
+            <element signature="e#48331#51279#0" />
+            <element signature="e#51286#51413#0" />
+            <element signature="e#51480#51877#0" />
+            <element signature="e#51977#52374#0" />
+            <element signature="e#52474#52739#0" />
+            <element signature="e#52474#52873#0" />
+            <element signature="e#52879#53419#0" />
+            <element signature="e#52879#53804#0" />
+            <element signature="e#53810#54593#0" />
+            <element signature="e#53810#54913#0" />
+            <element signature="e#54919#55819#0" />
+            <element signature="e#54919#56094#0" />
+            <element signature="e#56100#56950#0" />
+            <element signature="e#56100#57133#0" />
+            <element signature="e#57139#59870#0" />
+            <element signature="e#57139#61668#0" />
+            <element signature="e#60769#60835#0" />
+            <element signature="e#61674#61875#0" />
+            <element signature="e#61979#62109#0" />
+            <element signature="e#62175#62305#0" />
+            <element signature="e#62371#62475#0" />
+            <element signature="e#62543#62649#0" />
+            <element signature="e#62719#62854#0" />
+            <element signature="e#62928#63560#0" />
+            <element signature="e#63665#64346#0" />
+            <element signature="e#64445#64571#0" />
+            <element signature="e#64650#64794#0" />
+            <element signature="e#64876#66366#0" />
+            <element signature="e#64876#66643#0" />
+            <element signature="e#66649#68295#0" />
+            <element signature="e#66649#68592#0" />
+            <element signature="e#68598#69205#0" />
+            <element signature="e#68598#69450#0" />
+            <element signature="e#69456#70074#0" />
+            <element signature="e#69456#70323#0" />
+            <element signature="e#70329#70942#0" />
+            <element signature="e#70329#71193#0" />
+            <element signature="e#71199#71998#0" />
+            <element signature="e#71199#72267#0" />
+            <element signature="e#72273#73063#0" />
+            <element signature="e#72273#73365#0" />
+            <element signature="e#73371#74185#0" />
+            <element signature="e#73371#74490#0" />
+            <element signature="e#74497#75152#0" />
+            <element signature="e#74497#75387#0" />
+            <element signature="e#75393#76049#0" />
+            <element signature="e#75393#76306#0" />
+            <element signature="e#76312#76967#0" />
+            <element signature="e#76312#77229#0" />
+            <element signature="e#77235#78174#0" />
+            <element signature="e#77235#78523#0" />
+            <element signature="e#78529#79471#0" />
+            <element signature="e#78529#79788#0" />
+            <element signature="e#79794#80736#0" />
+            <element signature="e#79794#81059#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="297" column="16" selection-start-line="297" selection-start-column="16" selection-end-line="297" selection-end-column="16" />
+        <state relative-caret-position="302">
+          <caret line="1088" lean-forward="true" selection-start-line="1088" selection-end-line="1088" />
           <folding>
-            <element signature="e#37239#37240#0" expanded="true" />
-            <element signature="e#37315#37316#0" expanded="true" />
+            <element signature="docComment;class#BufferedImage#0" />
+            <element signature="e#2027#2190#0" />
+            <element signature="e#2241#2672#0" />
+            <element signature="e#2724#3184#0" />
+            <element signature="e#3237#3487#0" />
+            <element signature="e#3544#4088#0" />
+            <element signature="e#4140#4666#0" />
+            <element signature="e#4720#5178#0" />
+            <element signature="e#5233#5678#0" />
+            <element signature="e#5737#6182#0" />
+            <element signature="e#6241#6686#0" />
+            <element signature="e#6745#7177#0" />
+            <element signature="e#7232#7667#0" />
+            <element signature="e#7724#9010#0" />
+            <element signature="e#9067#9875#0" />
+            <element signature="initializer##0;class#BufferedImage#0" />
+            <element signature="e#10794#11525#0" />
+            <element signature="e#10794#20098#0" />
+            <element signature="e#20104#21231#0" />
+            <element signature="e#20104#23073#0" />
+            <element signature="e#23079#24592#0" />
+            <element signature="e#23079#33006#0" />
+            <element signature="e#26087#26150#0" />
+            <element signature="e#27730#27779#0" />
+            <element signature="e#33012#33841#0" />
+            <element signature="class#33392:33763" />
+            <element signature="method#run#0;class#33392:33763" />
+            <element signature="e#33847#34430#0" />
+            <element signature="e#34495#34622#0" />
+            <element signature="e#34701#34836#0" />
+            <element signature="e#34912#36027#0" />
+            <element signature="e#36134#37202#0" />
+            <element signature="e#37322#38674#0" />
+            <element signature="e#37322#40154#0" />
+            <element signature="e#40161#40891#0" />
+            <element signature="e#41028#42326#0" />
+            <element signature="e#41028#42833#0" />
+            <element signature="e#42840#42961#0" />
+            <element signature="e#43035#43158#0" />
+            <element signature="e#43234#43386#0" />
+            <element signature="e#43482#43636#0" />
+            <element signature="e#43734#43936#0" />
+            <element signature="e#43734#44203#0" />
+            <element signature="e#44210#45298#0" />
+            <element signature="e#45413#45688#0" />
+            <element signature="e#45413#46099#0" />
+            <element signature="e#46105#46438#0" />
+            <element signature="e#46528#46729#0" />
+            <element signature="e#46920#47672#0" />
+            <element signature="e#46920#48055#0" />
+            <element signature="e#48061#48297#0" />
+            <element signature="e#48403#48769#0" />
+            <element signature="e#48403#49088#0" />
+            <element signature="e#49094#49301#0" />
+            <element signature="e#49094#49477#0" />
+            <element signature="e#49483#50294#0" />
+            <element signature="e#50375#50755#0" />
+            <element signature="e#50375#51003#0" />
+            <element signature="e#51009#51207#0" />
+            <element signature="e#51279#51477#0" />
+            <element signature="e#51549#51736#0" />
+            <element signature="e#51830#51978#0" />
+            <element signature="e#52040#52188#0" />
+            <element signature="e#52250#52405#0" />
+            <element signature="e#52466#52621#0" />
+            <element signature="e#52682#52775#0" />
+            <element signature="e#52852#52947#0" />
+            <element signature="e#53026#53255#0" />
+            <element signature="e#53355#53584#0" />
+            <element signature="e#53684#54386#0" />
+            <element signature="e#53684#54638#0" />
+            <element signature="e#54644#54905#0" />
+            <element signature="e#54945#55003#0" />
+            <element signature="e#55751#56207#0" />
+            <element signature="e#55751#56944#0" />
+            <element signature="e#56950#57657#0" />
+            <element signature="e#56950#58242#0" />
+            <element signature="e#58246#58630#0" />
+            <element signature="e#58246#59544#0" />
+            <element signature="e#59280#59338#0" />
+            <element signature="e#59549#59713#0" />
+            <element signature="e#59549#59771#0" />
+            <element signature="e#59775#60038#0" />
+            <element signature="e#59775#60099#0" />
+            <element signature="e#60105#60581#0" />
+            <element signature="e#60105#60789#0" />
+            <element signature="e#60795#61153#0" />
+            <element signature="e#60795#61290#0" />
+            <element signature="e#61296#61587#0" />
+            <element signature="e#61657#62048#0" />
+            <element signature="e#62148#62680#0" />
+            <element signature="e#62148#62747#0" />
+            <element signature="e#62753#63036#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="140" column="8" lean-forward="true" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+        <state relative-caret-position="494">
+          <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
           <folding>
             <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
-            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#1;class#ImageSmoother#0" />
             <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
-            <element signature="method#ImageSmoother#2;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#3;class#ImageSmoother#0" />
             <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="method#saveImage#2;class#ImageSmoother#0" />
-            <element signature="method#grayscaleImage#0;class#ImageSmoother#0" />
+            <element signature="method#saveImage#3;class#ImageSmoother#0" />
+            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
+            <element signature="method#fillBlank#0;class#ImageSmoother#0" />
             <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="method#getGrayscaleMedianPixel#0;class#ImageSmoother#0" />
-            <element signature="e#2465#2513#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+            <element signature="method#getMedianPixel#0;class#ImageSmoother#0" />
+            <element signature="e#6159#6207#0" />
           </folding>
         </state>
       </provider>
