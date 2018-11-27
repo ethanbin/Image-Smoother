@@ -124,16 +124,26 @@ public class ImageSmoother {
         return image;
     }
 
-    private static Color fillBlank(Color[][] image, int x, int y, int leftBound, int rightBound, int topBound, int bottomBound){
-        if (image[x][y] != null) return image[x][y];
-        int nextRow = x, nextCol = y;
-        if (x == leftBound) nextRow = x + 1;
-        else if (x == rightBound) nextRow = x - 1;
-        if (y == topBound) nextCol = y + 1;
-        else if (y == bottomBound) nextCol = y - 1;
-        Color innerColor = fillBlank(image, nextRow, nextCol, leftBound + 1,
-                rightBound - 1,topBound + 1,bottomBound - 1);
-        image[x][y] = innerColor;
+    // recursively get and fill in colors
+    private Color fillBlank(BufferedImage image, int row, int col){
+        // find way to satisfy the below commented if statement
+        // if image.getRGB(row,col) != empty return image.getRGB(row,col);
+
+        // calculate the coordinate for color to copy from
+        int nextRow = row, nextCol = col;
+        if (row == 0) nextRow = row + 1;
+        else if (row == image.getHeight()) nextRow = row - 1;
+        if (col == 0) nextCol = col + 1;
+        else if (col == image.getWidth()) nextCol = col - 1;
+
+        // get the color of the given coordinates as innerColor
+        Color innerColor = fillBlank(image.getSubimage(1,1,image.getWidth() - 2, image.getHeight() - 2),
+                nextRow, nextCol);
+        // since the first statement didn't trigger, this current pixel
+        // has no color, so set this current pixel to innerColor
+        image.setRGB(row, col, innerColor.getRGB());
+
+        // return the color we got, which is now the same as this current pixel's
         return innerColor;
     }
 
