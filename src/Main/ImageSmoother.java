@@ -160,7 +160,7 @@ public class ImageSmoother {
         int innerColor = fillEdge(layer + 1, nextRow, nextCol);
         // since the first statement didn't trigger, this current pixel
         // has no color, so set this current pixel to innerColor
-        image.setRGB(row, col, innerColor);
+        image.setRGB(col, row, innerColor);
 
         // return the color we got, which is now the same as this current pixel's
         return innerColor;
@@ -216,9 +216,9 @@ public class ImageSmoother {
         int[] edgeData = ((DataBufferInt) edgedImage.getRaster().getDataBuffer()).getData();
 
         // set every pixels in edged image to -1 to use for checking unassigned pixels when filling edges
-//        for (int i = 0; i < edgeData.length; i++) {
-//            edgeData[i] = -1;
-//        }
+        for (int i = 0; i < edgeData.length; i++) {
+            edgeData[i] = -1;
+        }
 
         // draw original image onto center of edged image
         edgedImage.getGraphics().drawImage(image, edgeSize/2, edgeSize/2, null);
@@ -257,8 +257,8 @@ public class ImageSmoother {
 
     public static void main(String[] args) {
         ImageSmoother smoother = new ImageSmoother(
-                "samples/08.png",
-                "samples/08-3.png", true);
+                "samples/07.png",
+                "samples/07-3.png", true);
         if (!smoother.imageExists()) return;
         smoother.smoothImage(3);
         smoother.saveImage();
