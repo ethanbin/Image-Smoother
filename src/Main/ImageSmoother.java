@@ -3,12 +3,15 @@ package Main;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
+import java.awt.image.DataBufferInt;
 import java.awt.image.RasterFormatException;
 import java.io.File;
 
 public class ImageSmoother {
     private boolean imageExists;
     private boolean overwritable;
+    int     windowSize = 0;
     private String imageLocation;
     private String saveLocation;
     private BufferedImage image;
@@ -124,52 +127,43 @@ public class ImageSmoother {
         return image;
     }
 
-    // recursively get and fill in colors
-    private Color fillBlank(BufferedImage image, int row, int col){
-        // find way to satisfy the below commented if statement
-        // if image.getRGB(row,col) != empty return image.getRGB(row,col);
+    private void fillEdges(){
+        for (int i = 0; i < image.getHeight(); i++) {
+            // left edge
+            fillEdge(0, i, 0);
+            // right edge
+            fillEdge(0, i,image.getWidth()-1);
+        }
+        for (int i = 0; i < image.getWidth(); i++) {
+            // top edge
+            fillEdge(0, 0, i);
+            // bottom edge
+            fillEdge(0, image.getHeight()-1, i);
+        }
+
+    }
+
+
+    // recursively get and fill in RGBs
+    private int fillEdge(int layer, int row, int col){
+        if (image.getRGB(col,row) != -1)
+            return image.getRGB(col,row);
 
         // calculate the coordinate for color to copy from
         int nextRow = row, nextCol = col;
-        if (row == 0) nextRow = row + 1;
-        else if (row == image.getHeight()) nextRow = row - 1;
-        if (col == 0) nextCol = col + 1;
-        else if (col == image.getWidth()) nextCol = col - 1;
+        if (row == layer) nextRow = row + 1;
+        else if (row == image.getHeight() - 1 - layer) nextRow = row - 1;
+        if (col == layer) nextCol = col + 1;
+        else if (col == image.getWidth() - 1 - layer) nextCol = col - 1;
 
         // get the color of the given coordinates as innerColor
-        Color innerColor = fillBlank(image.getSubimage(1,1,image.getWidth() - 2, image.getHeight() - 2),
-                nextRow, nextCol);
+        int innerColor = fillEdge(layer + 1, nextRow, nextCol);
         // since the first statement didn't trigger, this current pixel
         // has no color, so set this current pixel to innerColor
-        image.setRGB(row, col, innerColor.getRGB());
+        image.setRGB(row, col, innerColor);
 
         // return the color we got, which is now the same as this current pixel's
         return innerColor;
-    }
-
-    // this method will get a subimage in the case where the required subimage is out
-    // of bounds of the original image. It will do this by copying the pixels at the
-    // available edge(s) to the places that would be out of bounds.
-    private BufferedImage getSubImageWithCopiedEdges(BufferedImage image, int x, int y, int subsize) {
-        Color [][] pixelMatrix = new Color[subsize][subsize];
-        // calculate range of coordinates that subimage would have within image
-        int rowStart = x - subsize/2;
-        int rowEnd   = x + subsize/2;
-        int colStart = y - subsize/2;
-        int colEnd   = y + subsize/2;
-        for (int i = rowStart; i <= rowEnd; i++){
-            for (int j = colStart; j <= colEnd; j++) {
-                pixelMatrix[i][i] = new Color(image.getRGB(i,j));
-            }
-        }
-        for (int i = 0; i < 101; i++)
-            fillBlank(pixelMatrix, 0, i, 0,0, image.getHeight(), image.getWidth());
-        BufferedImage subimage = new BufferedImage(subsize, subsize, image.getType());
-        for (int i = 0; i < subsize; i++)
-            for (int j = 0; j < subsize; j++)
-                subimage.setRGB(i,j, pixelMatrix[i][j].getRGB());
-
-        return subimage;
     }
 
     // get each Color (AKA pixel) in an image and place it into an array
@@ -213,33 +207,60 @@ public class ImageSmoother {
         return pixels[targetIndex];
     }
 
-    public void smoothImage(int subsize){
-        BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-        for (int i = 0; i < image.getHeight(); i++) {
-            for (int j = 0; j < image.getWidth(); j++) {
-                BufferedImage subImage;
-                try {
-                    subImage = image.getSubimage(j + subsize / 2, i + subsize / 2, subsize, subsize);
-                }
-                catch (RasterFormatException e){
+    private void createEdges() {
+        // for testing
+        // new picture will have original's height + windowSize-1, since half of the windowSize will be appended to top
+        // and bottom of image, which is windowSize-1 in total since windowSize must always be odd.
+        int edgeSize = windowSize - 1;
+        BufferedImage edgedImage = new BufferedImage(image.getWidth() + edgeSize, image.getHeight() + edgeSize, BufferedImage.TYPE_INT_ARGB);
+        int[] edgeData = ((DataBufferInt) edgedImage.getRaster().getDataBuffer()).getData();
 
-                    subImage = getSubImageWithCopiedEdges(image, j, i, subsize);
-                }
+        // set every pixels in edged image to -1 to use for checking unassigned pixels when filling edges
+//        for (int i = 0; i < edgeData.length; i++) {
+//            edgeData[i] = -1;
+//        }
+
+        // draw original image onto center of edged image
+        edgedImage.getGraphics().drawImage(image, edgeSize/2, edgeSize/2, null);
+        edgedImage.getGraphics().dispose();
+
+
+        //TODO - get this working after program works to improve speed
+//        byte[] edgedData = ((DataBufferByte) edgedImage.getRaster().getDataBuffer()).getData();
+//        byte[] originalData = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
+//
+        // copy image into larger, edged image. currently not working,
+//        for (int i = windowSize / 2 * 3, originalI = 0; i < image.getHeight() - windowSize / 2; i++, originalI++) {
+//            for (int j = windowSize / 2 * 3, originalJ = 0; j < image.getWidth() - windowSize / 2; j++, originalJ++) {
+//                edgedData[i + j * edgedImage.getWidth()] = originalData[originalI + originalJ * image.getWidth()];
+//            }
+//        }
+
+        image = edgedImage;
+        fillEdges();
+    }
+
+    public void smoothImage(int subsize){
+        windowSize = subsize;
+        createEdges();
+        BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+        for (int i = windowSize/2; i < image.getHeight() - windowSize/2; i++) {
+            for (int j = windowSize/2; j < image.getWidth() - windowSize/2; j++) {
+                BufferedImage subImage;
+                subImage = image.getSubimage(j - windowSize / 2, i - windowSize / 2, windowSize, windowSize);
                 smoothedImage.setRGB(j,i, getMedianPixel(subImage).getRGB());
             }
         }
-        image = smoothedImage;
+        image = smoothedImage.getSubimage(windowSize/2,windowSize/2,
+                image.getWidth() - windowSize/2, image.getHeight() - windowSize/2);
     }
 
     public static void main(String[] args) {
         ImageSmoother smoother = new ImageSmoother(
-                "samples/butterfly.jpg",
-                "samples/image-out-3.png");
+                "samples/08.png",
+                "samples/08-3.png", true);
         if (!smoother.imageExists()) return;
-        BufferedImage image = new BufferedImage(101, 101, BufferedImage.TYPE_INT_RGB);
-        image.setRGB(50, 50, 100000100);
-        smoother.image=image;
-        //smoother.smoothImage(3);
+        smoother.smoothImage(3);
         smoother.saveImage();
     }
 }
