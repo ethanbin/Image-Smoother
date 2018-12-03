@@ -243,6 +243,7 @@ public class ImageSmoother {
     public void smoothImage(int subsize){
         windowSize = subsize;
         createEdges();
+        System.out.println("edges finished");
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
         for (int i = windowSize/2; i < image.getHeight() - windowSize/2; i++) {
             for (int j = windowSize/2; j < image.getWidth() - windowSize/2; j++) {
@@ -252,15 +253,15 @@ public class ImageSmoother {
             }
         }
         image = smoothedImage.getSubimage(windowSize/2,windowSize/2,
-                image.getWidth() - windowSize/2, image.getHeight() - windowSize/2);
+                image.getWidth() - windowSize, image.getHeight() - windowSize);
     }
 
     public static void main(String[] args) {
         ImageSmoother smoother = new ImageSmoother(
-                "samples/07.png",
-                "samples/07-3.png", true);
+                "samples/11.png",
+                "samples/11-3.png", true);
         if (!smoother.imageExists()) return;
-        smoother.smoothImage(3);
+        smoother.smoothImage(15);
         smoother.saveImage();
     }
 }
