@@ -146,7 +146,7 @@ public class ImageSmoother {
 
     // recursively get and fill in RGBs
     private int fillEdge(int layer, int row, int col){
-        if (image.getRGB(col,row) != -1)
+        if (image.getRGB(col,row) != -1 || layer > windowSize/2)
             return image.getRGB(col,row);
 
         // calculate the coordinate for color to copy from
@@ -243,7 +243,6 @@ public class ImageSmoother {
     public void smoothImage(int subsize){
         windowSize = subsize;
         createEdges();
-        System.out.println("edges finished");
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
         for (int i = windowSize/2; i < image.getHeight() - windowSize/2; i++) {
             for (int j = windowSize/2; j < image.getWidth() - windowSize/2; j++) {
@@ -253,7 +252,7 @@ public class ImageSmoother {
             }
         }
         image = smoothedImage.getSubimage(windowSize/2,windowSize/2,
-                image.getWidth() - windowSize, image.getHeight() - windowSize);
+                image.getWidth() - windowSize + 1, image.getHeight() - windowSize + 1);
     }
 
     public static void main(String[] args) {
