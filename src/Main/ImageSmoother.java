@@ -1,11 +1,12 @@
 package Main;
 
+import Main.OrderStatistic.OrderStatistic;
+import Main.OrderStatistic.Strategies.QuickSelectStrategy;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
 import java.awt.image.DataBufferInt;
-import java.awt.image.RasterFormatException;
 import java.io.File;
 
 public class ImageSmoother {
@@ -256,7 +257,7 @@ public class ImageSmoother {
     }
 
     public static void main(String[] args) {
-        OrderStatistic.testAndPrint();
+        OrderStatistic.testAndPrint(new QuickSelectStrategy());
         ImageSmoother smoother = new ImageSmoother(
                 "samples/11.png",
                 "samples/11-3.png", false);

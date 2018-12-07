@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="211" />
-    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="134" />
+    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="212" />
+    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="135" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9422378c-5af1-4ed0-a28a-245ff98a604c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/results.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/OrderStatistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/OrderStatistic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ImageSmoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ImageSmoother.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/OrderStatistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatistic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="181" column="54" selection-start-line="181" selection-start-column="54" selection-end-line="181" selection-end-column="54" />
+            <state relative-caret-position="759">
+              <caret line="259" column="40" selection-start-line="259" selection-start-column="40" selection-end-line="259" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
@@ -45,40 +45,38 @@
                 <element signature="method#imageToArray#0;class#ImageSmoother#0" />
                 <element signature="method#createEdges#0;class#ImageSmoother#0" />
                 <element signature="method#smoothImage#0;class#ImageSmoother#0" />
-                <element signature="method#main#0;class#ImageSmoother#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="170" column="43" selection-start-line="170" selection-start-column="43" selection-end-line="170" selection-end-column="43" />
+            <state relative-caret-position="119">
+              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#findKthSmallestInt#0;class#QuickSelectStrategy#0" />
+                <element signature="docComment;method#quickSelect#1;class#QuickSelectStrategy#0" />
+                <element signature="method#quickSelect#1;class#QuickSelectStrategy#0" />
+                <element signature="method#partition#0;class#QuickSelectStrategy#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatistic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
               <folding>
                 <element signature="docComment;method#randomFill#0;class#OrderStatistic#0" />
                 <element signature="method#randomFill#0;class#OrderStatistic#0" />
                 <element signature="method#printResults#0;class#OrderStatistic#0" />
-                <element signature="e#1454#1489#0" />
-                <element signature="e#1901#1972#1" />
-                <element signature="e#2583#2688#1" />
                 <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
                 <element signature="method#testAndPrint#0;class#OrderStatistic#0" />
-                <element signature="e#3082#3947#1" />
-                <element signature="e#3169#3937#1" />
-                <element signature="e#3334#3841#1" />
-                <element signature="e#3960#4031#0" />
-                <element signature="e#4059#4096#0" />
-                <element signature="method#quickSort#0;class#OrderStatistic#0" />
-                <element signature="method#iterativeSelection#0;class#OrderStatistic#0" />
-                <element signature="e#5339#5716#1" />
-                <element signature="method#quickSelect#0;class#OrderStatistic#0" />
-                <element signature="docComment;method#quickSelect#1;class#OrderStatistic#0" />
-                <element signature="method#quickSelect#1;class#OrderStatistic#0" />
-                <element signature="method#partition#0;class#OrderStatistic#0" />
-                <element signature="e#7330#7448#1" />
-                <element signature="e#7369#7438#1" />
                 <element signature="method#swap#0;class#OrderStatistic#0" />
               </folding>
             </state>
@@ -111,8 +109,17 @@
         <option value="$PROJECT_DIR$/src/Main/OrderStatisticsTester.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/Main/NoiseSmoother.java" />
-        <option value="$PROJECT_DIR$/src/Main/ImageSmoother.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/QuickSelectStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticBaseStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortBaseStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectBaseStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/IterativeSelectStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatistic.java" />
+        <option value="$PROJECT_DIR$/src/Main/ImageSmoother.java" />
       </list>
     </option>
   </component>
@@ -146,6 +153,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Image-Smoother" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Image-Smoother" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderStatistic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Image-Smoother" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Image-Smoother" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderStatistic" type="462c0819:PsiDirectoryNode" />
+              <item name="Strategies" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -158,7 +180,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544205459260" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544208133979" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -193,7 +215,7 @@
       <module name="Image-Smoother" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Main.*" />
+          <option name="PATTERN" value="Main.OrderStatistic.Strategies.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -251,7 +273,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108297000" />
+    <option name="totallyTimeSpent" value="110444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -297,15 +319,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/ImageSmoother.java</url>
-          <line>130</line>
+          <line>131</line>
           <properties />
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/OrderStatistic.java</url>
-          <line>135</line>
-          <properties />
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -322,10 +338,76 @@
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/ArrayIndexOutOfBoundsException.java" />
+    <entry file="file://$PROJECT_DIR$/results.csv">
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/util/concurrent/ThreadLocalRandom.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticBaseStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/IterativeSelectStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findKthSmallestInt#0;class#QuickSelectStrategy#0" />
+            <element signature="docComment;method#quickSelect#1;class#QuickSelectStrategy#0" />
+            <element signature="method#quickSelect#1;class#QuickSelectStrategy#0" />
+            <element signature="method#partition#0;class#QuickSelectStrategy#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatistic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+          <folding>
+            <element signature="docComment;method#randomFill#0;class#OrderStatistic#0" />
+            <element signature="method#randomFill#0;class#OrderStatistic#0" />
+            <element signature="method#printResults#0;class#OrderStatistic#0" />
+            <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
+            <element signature="method#testAndPrint#0;class#OrderStatistic#0" />
+            <element signature="method#swap#0;class#OrderStatistic#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="181" column="54" selection-start-line="181" selection-start-column="54" selection-end-line="181" selection-end-column="54" />
+        <state relative-caret-position="759">
+          <caret line="259" column="40" selection-start-line="259" selection-start-column="40" selection-end-line="259" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
@@ -341,49 +423,6 @@
             <element signature="method#imageToArray#0;class#ImageSmoother#0" />
             <element signature="method#createEdges#0;class#ImageSmoother#0" />
             <element signature="method#smoothImage#0;class#ImageSmoother#0" />
-            <element signature="method#main#0;class#ImageSmoother#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results.csv">
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/util/concurrent/ThreadLocalRandom.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="170" column="43" selection-start-line="170" selection-start-column="43" selection-end-line="170" selection-end-column="43" />
-          <folding>
-            <element signature="docComment;method#randomFill#0;class#OrderStatistic#0" />
-            <element signature="method#randomFill#0;class#OrderStatistic#0" />
-            <element signature="method#printResults#0;class#OrderStatistic#0" />
-            <element signature="e#1454#1489#0" />
-            <element signature="e#1901#1972#1" />
-            <element signature="e#2583#2688#1" />
-            <element signature="docComment;method#testAndPrint#0;class#OrderStatistic#0" />
-            <element signature="method#testAndPrint#0;class#OrderStatistic#0" />
-            <element signature="e#3082#3947#1" />
-            <element signature="e#3169#3937#1" />
-            <element signature="e#3334#3841#1" />
-            <element signature="e#3960#4031#0" />
-            <element signature="e#4059#4096#0" />
-            <element signature="method#quickSort#0;class#OrderStatistic#0" />
-            <element signature="method#iterativeSelection#0;class#OrderStatistic#0" />
-            <element signature="e#5339#5716#1" />
-            <element signature="method#quickSelect#0;class#OrderStatistic#0" />
-            <element signature="docComment;method#quickSelect#1;class#OrderStatistic#0" />
-            <element signature="method#quickSelect#1;class#OrderStatistic#0" />
-            <element signature="method#partition#0;class#OrderStatistic#0" />
-            <element signature="e#7330#7448#1" />
-            <element signature="e#7369#7438#1" />
-            <element signature="method#swap#0;class#OrderStatistic#0" />
           </folding>
         </state>
       </provider>
