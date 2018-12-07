@@ -78,9 +78,7 @@ public abstract class OrderStatistic {
                     int[] arr = randomFill(size, range);
                     int target = ThreadLocalRandom.current().nextInt(0, size);
                     long startTime = System.nanoTime();
-                    int res = selectionAlgorithm(arr, target);
-                    if (res != quickSort(arr, k))
-                        System.err.println("selection alg failed!");
+                    int result = quickSelect(arr, target);
                     long finishTime = System.nanoTime();
                     average += (finishTime - startTime);
                 }
@@ -98,7 +96,7 @@ public abstract class OrderStatistic {
     }
 
     public static int quickSort(int[] arr, int k){
-        if (k > arr.length)
+        if (k >= arr.length)
             throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(k)  + "th " +
                     "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
         else if (k < 0)
@@ -110,7 +108,7 @@ public abstract class OrderStatistic {
     }
 
     protected static int iterativeSelection(int[] arr, int targetIndex) {
-        if (targetIndex > arr.length)
+        if (targetIndex >= arr.length)
             throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(targetIndex)  + "th " +
                     "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
         else if (targetIndex < 0)
@@ -133,49 +131,65 @@ public abstract class OrderStatistic {
         return arr[targetIndex];
     }
 
-    public static int selectionAlgorithm(int[] arr, int k){
-        if (k > arr.length)
+    public static int quickSelect(int[] arr, int k){
+        if (k >= arr.length)
             throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(k)  + "th " +
                     "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
         else if (k < 0)
             throw new ArrayIndexOutOfBoundsException("Target value cannot be negative - user requested the " +
                     Integer.toString(k)  + "th smallest number.");
-        return selectionAlgorithm(arr, 0, arr.length - 1, k);
+        return quickSelect(arr, 0, arr.length - 1, k);
     }
 
     /**
      *
-     * @param arr
+     * @param arr input
      * @param k the targeted smallest number at position k
      * @param start starting position of the arrray, inclusive
      * @param end ending position of the array, inclusive
-     * @return value
+     * @return value of k smallest number
      */
-    private static int selectionAlgorithm(int[] arr, int start, int end, int k){
+    private static int quickSelect(int[] arr, int start, int end, int k){
+        if (start == end)
+            return arr[start];
+
         int pivot = partition(arr, start, end);
+
         if (pivot == k)
-            return arr[k];
+            return arr[pivot];
         else if (pivot > k)
-            return selectionAlgorithm(arr, start, pivot-1, k);
+            return quickSelect(arr, start, pivot-1, k);
         else
-            return selectionAlgorithm(arr, pivot + 1, end, k);
+            return quickSelect(arr, pivot + 1, end, k);
     }
 
+    /**
+     * Partition a (sub)array using arr[end] as a pivot, where every value less than the pivot is on the left of
+     * the pivot and every value greater on the right.
+     * @param arr input
+     * @param start inclusive starting position
+     * @param end inclusive ending position
+     * @return
+     */
     private static int partition(int[] arr, int start, int end){
         int pivotValue = arr[end];
-        int j = start - 1;
+        int j = start;
         for (int i = start; i < end; i++){
-            if (arr[i] <= pivotValue) {
+            if (arr[i] < pivotValue) {
+                swap(arr, i, j);
                 j++;
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
             }
         }
         // swap pivot with first element greater than pivot
-        int temp = arr[j+1];
-        arr[j+1] = arr[end];
-        arr[end] = temp;
-        return j + 1;
+        swap(arr, j, end);
+        return j;
     }
+
+    // swap the values of 2 indexes in an array
+    private static void swap(int[] array, int a, int b) {
+        int tmp = array[a];
+        array[a] = array[b];
+        array[b] = tmp;
+    }
+
 }
