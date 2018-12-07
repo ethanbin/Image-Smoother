@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class OrderStatistic {
     protected final static int[] RANGE = {5000, 8000, 10000}; //N
-    protected final static int[] SIZES = {100, 300, 500, 1000, 2000, 4000}; //n
+    protected final static int[] SIZES = {20, 100, 300, 500, 1000, 2000, 4000}; //n
     protected final static int TRAILS_COUNT = 50;
     protected final static String TABLE_NAME = "results.csv";
 
@@ -78,7 +78,9 @@ public abstract class OrderStatistic {
                     int[] arr = randomFill(size, range);
                     int target = ThreadLocalRandom.current().nextInt(0, size);
                     long startTime = System.nanoTime();
-                    orderStatisticPivot(arr, target);
+                    int res = selectionAlgorithm(arr, target);
+                    if (res != quickSort(arr, k))
+                        System.err.println("selection alg failed!");
                     long finishTime = System.nanoTime();
                     average += (finishTime - startTime);
                 }
@@ -95,15 +97,26 @@ public abstract class OrderStatistic {
         }
     }
 
-    public static int orderStatisticPivot(int arr[], int k){
+    public static int quickSort(int[] arr, int k){
+        if (k > arr.length)
+            throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(k)  + "th " +
+                    "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
+        else if (k < 0)
+            throw new ArrayIndexOutOfBoundsException("Target value cannot be negative - user requested the " +
+                    Integer.toString(k)  + "th smallest number.");
         // will use pivot sort or dual pivot sort depending on Java version
         Arrays.sort(arr);
         return arr[k];
     }
 
-    protected static int OrderStatisticSelection(int[] arr, int targetIndex) {
-        if (arr.length < 1 || targetIndex > arr.length - 1)
-            return -1;
+    protected static int iterativeSelection(int[] arr, int targetIndex) {
+        if (targetIndex > arr.length)
+            throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(targetIndex)  + "th " +
+                    "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
+        else if (targetIndex < 0)
+            throw new ArrayIndexOutOfBoundsException("Target value cannot be negative - user requested the " +
+                    Integer.toString(targetIndex)  + "th smallest number.");
+
         for (int i = 0; i <= targetIndex; i++)
         {
             // Find the minimum element in unsorted array
@@ -118,5 +131,51 @@ public abstract class OrderStatistic {
             arr[i] = temp;
         }
         return arr[targetIndex];
+    }
+
+    public static int selectionAlgorithm(int[] arr, int k){
+        if (k > arr.length)
+            throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(k)  + "th " +
+                    "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
+        else if (k < 0)
+            throw new ArrayIndexOutOfBoundsException("Target value cannot be negative - user requested the " +
+                    Integer.toString(k)  + "th smallest number.");
+        return selectionAlgorithm(arr, 0, arr.length - 1, k);
+    }
+
+    /**
+     *
+     * @param arr
+     * @param k the targeted smallest number at position k
+     * @param start starting position of the arrray, inclusive
+     * @param end ending position of the array, inclusive
+     * @return value
+     */
+    private static int selectionAlgorithm(int[] arr, int start, int end, int k){
+        int pivot = partition(arr, start, end);
+        if (pivot == k)
+            return arr[k];
+        else if (pivot > k)
+            return selectionAlgorithm(arr, start, pivot-1, k);
+        else
+            return selectionAlgorithm(arr, pivot + 1, end, k);
+    }
+
+    private static int partition(int[] arr, int start, int end){
+        int pivotValue = arr[end];
+        int j = start - 1;
+        for (int i = start; i < end; i++){
+            if (arr[i] <= pivotValue) {
+                j++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        // swap pivot with first element greater than pivot
+        int temp = arr[j+1];
+        arr[j+1] = arr[end];
+        arr[end] = temp;
+        return j + 1;
     }
 }

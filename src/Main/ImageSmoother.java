@@ -256,11 +256,12 @@ public class ImageSmoother {
     }
 
     public static void main(String[] args) {
+        OrderStatistic.testAndPrint();
         ImageSmoother smoother = new ImageSmoother(
                 "samples/11.png",
-                "samples/11-3.png", true);
+                "samples/11-3.png", false);
         if (!smoother.imageExists()) return;
-        smoother.smoothImage(15);
+        smoother.smoothImage(3);
         smoother.saveImage();
     }
 }
