@@ -4,6 +4,8 @@ import Main.OrderStatistic.OrderStatistic;
 import Main.OrderStatistic.OrderStatisticBaseStrategy;
 
 public class QuickSelectStrategy extends OrderStatisticBaseStrategy {
+    final String HEADER = "ORDER STATISTIC - QUICK SELECT";
+
     @Override
     public int findKthSmallestInt(int[] arr, int k) {
         if (k >= arr.length)

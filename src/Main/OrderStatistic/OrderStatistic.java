@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class OrderStatistic {
     protected final static int[] RANGE = {5000, 8000, 10000}; //N
-    protected final static int[] SIZES = {20, 100, 300, 500, 1000, 2000, 4000}; //n
+    protected final static int[] SIZES = {100, 300, 500, 1000, 2000, 4000}; //n
     protected final static int TRAILS_COUNT = 50;
     protected final static String TABLE_NAME = "results.csv";
 
@@ -30,14 +30,15 @@ public abstract class OrderStatistic {
     }
 
     // append or create and write data to a CSV file
-    protected static final void printResults(double[][] results) throws IOException {
+    protected static final void printResults(double[][] results, String header) throws IOException {
         // begin creating and printing file
         //PrintWriter pw = new PrintWriter(new File(TABLE_NAME));
         FileWriter fw = new FileWriter(TABLE_NAME, true);
         StringBuilder table = new StringBuilder();
         // the line.separator thing will ensure the correct newline specific to the system running this is appended
+        table.append(header);
         table.append(System.getProperty("line.separator"));
-        table.append("SIZES,");
+        table.append("RANGE\\SIZES,");
         for (int n : SIZES) {
             table.append(n);
             table.append(",");
@@ -56,7 +57,9 @@ public abstract class OrderStatistic {
             table.append(sb);
             table.append(System.getProperty("line.separator"));
         }
+        table.append(System.getProperty("line.separator"));
         fw.append(table.toString());
+
         fw.close();
     }
 
@@ -87,7 +90,8 @@ public abstract class OrderStatistic {
             }
         }
         try {
-            printResults(results);
+
+            printResults(results, strategy.getHEADER());
             return true;
         }
         catch (Exception e){

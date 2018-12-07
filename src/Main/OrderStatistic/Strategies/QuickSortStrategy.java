@@ -5,6 +5,8 @@ import Main.OrderStatistic.OrderStatisticBaseStrategy;
 import java.util.Arrays;
 
 public class QuickSortStrategy extends OrderStatisticBaseStrategy {
+    final String HEADER = "ORDER STATISTIC - QUICK SORT";
+
     @Override
     public int findKthSmallestInt(int [] arr, int k){
         if (k >= arr.length)

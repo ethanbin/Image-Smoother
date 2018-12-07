@@ -3,6 +3,8 @@ import Main.OrderStatistic.OrderStatistic;
 import Main.OrderStatistic.OrderStatisticBaseStrategy;
 
 public class IterativeSelectStrategy extends OrderStatisticBaseStrategy {
+    final String HEADER = "ORDER STATISTIC - ITERATIVE SELECTION";
+
     @Override
     public int findKthSmallestInt(int [] arr, int targetIndex){
         if (targetIndex >= arr.length)

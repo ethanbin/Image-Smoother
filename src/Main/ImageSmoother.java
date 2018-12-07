@@ -2,6 +2,7 @@ package Main;
 
 import Main.OrderStatistic.OrderStatistic;
 import Main.OrderStatistic.Strategies.QuickSelectStrategy;
+import Main.OrderStatistic.Strategies.QuickSortStrategy;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -258,6 +259,7 @@ public class ImageSmoother {
 
     public static void main(String[] args) {
         OrderStatistic.testAndPrint(new QuickSelectStrategy());
+        OrderStatistic.testAndPrint(new QuickSortStrategy());
         ImageSmoother smoother = new ImageSmoother(
                 "samples/11.png",
                 "samples/11-3.png", false);
