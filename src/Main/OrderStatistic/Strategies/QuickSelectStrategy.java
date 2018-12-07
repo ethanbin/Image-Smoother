@@ -1,9 +1,11 @@
 package Main.OrderStatistic.Strategies;
 
+import Main.OrderStatistic.OrderStatisticTester;
 import Main.OrderStatistic.OrderStatistic;
-import Main.OrderStatistic.OrderStatisticBaseStrategy;
 
-public class QuickSelectStrategy extends OrderStatisticBaseStrategy {
+import java.awt.*;
+
+public class QuickSelectStrategy extends OrderStatistic {
     final String HEADER = "ORDER STATISTIC - QUICK SELECT";
 
     @Override
@@ -52,12 +54,53 @@ public class QuickSelectStrategy extends OrderStatisticBaseStrategy {
         int j = start;
         for (int i = start; i < end; i++){
             if (arr[i] < pivotValue) {
-                OrderStatistic.swap(arr, i, j);
+                OrderStatisticTester.swap(arr, i, j);
                 j++;
             }
         }
         // swap pivot with first element greater than pivot
-        OrderStatistic.swap(arr, j, end);
+        OrderStatisticTester.swap(arr, j, end);
+        return j;
+    }
+
+    public Color findMedianColor(Color [] arr){
+        int targetIndex = arr.length/2;
+        return findMedianColor(arr, 0, arr.length-1, targetIndex);
+    }
+
+    // start and end are inclusive
+
+    private Color findMedianColor(Color [] arr, int start, int end, int k){
+        if (start == end)
+            return arr[start];
+
+        int pivot = partition(arr, start, end);
+
+        if (pivot == k)
+            return arr[pivot];
+        else if (pivot > k)
+            return findMedianColor(arr, start, pivot-1, k);
+        else
+            return findMedianColor(arr, pivot + 1, end, k);
+
+    }
+    
+    private int partition(Color [] arr, int start, int end){
+        Color pivotColor = arr[end];
+        int pivotGreyLevelValue = (pivotColor.getRed() + pivotColor.getGreen() + pivotColor.getBlue()) / 3;
+        int j = start;
+        for (int i = start; i < end; i++){
+            Color currentColor = arr[i];
+            int currentGreyLevel = (currentColor.getRed() + currentColor.getGreen() + currentColor.getBlue()) / 3;
+            if (currentGreyLevel < pivotGreyLevelValue) {
+                arr[i] = arr[j];
+                arr[j] = currentColor;
+                j++;
+            }
+        }
+        // swap pivot with first element greater than pivot
+        arr[end] = arr[j];
+        arr[j] = pivotColor;
         return j;
     }
 }

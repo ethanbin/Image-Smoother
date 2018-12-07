@@ -1,8 +1,8 @@
 package Main.OrderStatistic.Strategies;
+import Main.OrderStatistic.OrderStatisticTester;
 import Main.OrderStatistic.OrderStatistic;
-import Main.OrderStatistic.OrderStatisticBaseStrategy;
 
-public class IterativeSelectStrategy extends OrderStatisticBaseStrategy {
+public class IterativeSelectStrategy extends OrderStatistic {
     final String HEADER = "ORDER STATISTIC - ITERATIVE SELECTION";
 
     @Override
@@ -23,7 +23,7 @@ public class IterativeSelectStrategy extends OrderStatisticBaseStrategy {
                     minIndex = j;
 
             // swap minimum with current index
-            OrderStatistic.swap(arr, minIndex, i);
+            OrderStatisticTester.swap(arr, minIndex, i);
         }
         return arr[targetIndex];
 

@@ -1,6 +1,6 @@
 package Main;
 
-import Main.OrderStatistic.OrderStatistic;
+import Main.OrderStatistic.OrderStatisticTester;
 import Main.OrderStatistic.Strategies.QuickSelectStrategy;
 import Main.OrderStatistic.Strategies.QuickSortStrategy;
 
@@ -184,7 +184,8 @@ public class ImageSmoother {
     private Color getMedianPixel(BufferedImage image){
         // put every Color in subimage into an array
         Color[] pixels = imageToArray(image);
-
+        return new QuickSelectStrategy().findMedianColor(pixels);
+        /*
         // calculate median index
         int targetIndex = pixels.length/2;
 
@@ -207,6 +208,7 @@ public class ImageSmoother {
         }
 
         return pixels[targetIndex];
+        */
     }
 
     private void createEdges() {
@@ -258,13 +260,13 @@ public class ImageSmoother {
     }
 
     public static void main(String[] args) {
-        OrderStatistic.testAndPrint(new QuickSelectStrategy());
-        OrderStatistic.testAndPrint(new QuickSortStrategy());
+        OrderStatisticTester.testAndPrint(new QuickSelectStrategy());
+        OrderStatisticTester.testAndPrint(new QuickSortStrategy());
         ImageSmoother smoother = new ImageSmoother(
                 "samples/11.png",
-                "samples/11-3.png", false);
+                "samples/11-4.png", true);
         if (!smoother.imageExists()) return;
-        smoother.smoothImage(3);
+        smoother.smoothImage(5);
         smoother.saveImage();
     }
 }

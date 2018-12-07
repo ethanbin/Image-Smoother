@@ -1,10 +1,10 @@
 package Main.OrderStatistic.Strategies;
 
-import Main.OrderStatistic.OrderStatisticBaseStrategy;
+import Main.OrderStatistic.OrderStatistic;
 
 import java.util.Arrays;
 
-public class QuickSortStrategy extends OrderStatisticBaseStrategy {
+public class QuickSortStrategy extends OrderStatistic {
     final String HEADER = "ORDER STATISTIC - QUICK SORT";
 
     @Override
