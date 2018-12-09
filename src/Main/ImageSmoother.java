@@ -1,5 +1,6 @@
 package Main;
 
+import Main.OrderStatistic.OrderStatisticStrategy;
 import Main.OrderStatistic.OrderStatisticTester;
 import Main.OrderStatistic.Strategies.QuickSelectStrategy;
 import Main.OrderStatistic.Strategies.QuickSortStrategy;
@@ -12,44 +13,26 @@ import java.io.File;
 
 public class ImageSmoother {
     private boolean imageExists;
-    private boolean overwritable;
     int     windowSize = 0;
     private String imageLocation;
     private String saveLocation;
     private BufferedImage image;
+    private OrderStatisticStrategy orderStat;
 
-    public ImageSmoother(String imageLocation) {
-        this.imageLocation = imageLocation;
-        this.overwritable = false;
-        imageExists = openImage();
-    }
-
+    // use QuickSelectStrategy as default strategy
     public ImageSmoother(String imageLocation, String saveLocation) {
-        this.imageLocation = imageLocation;
-        this.saveLocation = saveLocation;
-        this.overwritable = false;
-        imageExists = openImage();
+        this(imageLocation, saveLocation, new QuickSelectStrategy());
     }
 
-    public ImageSmoother(String imageLocation, boolean overwritable) {
-        this.overwritable = overwritable;
-        this.imageLocation = imageLocation;
-        imageExists = openImage();
-    }
-
-    public ImageSmoother(String imageLocation, String saveLocation, boolean overwritable) {
-        this.overwritable = overwritable;
+    public ImageSmoother(String imageLocation, String saveLocation, OrderStatisticStrategy orderStatisticStrategy) {
         this.imageLocation = imageLocation;
         this.saveLocation = saveLocation;
         imageExists = openImage();
+        this.orderStat = orderStatisticStrategy;
     }
 
     public boolean imageExists() {
         return imageExists;
-    }
-
-    public boolean isOverwritable() {
-        return overwritable;
     }
 
     public String getImageLocation() {
@@ -60,9 +43,15 @@ public class ImageSmoother {
         return saveLocation;
     }
 
+    /*
+    public boolean isOverwritable() {
+        return overwritable;
+    }
+
     public void setOverwritable(boolean overwritable) {
         this.overwritable = overwritable;
     }
+    */
 
     private boolean openImage() {
         try {
@@ -78,22 +67,12 @@ public class ImageSmoother {
     }
 
     public boolean saveImage(){
-        return saveImage(saveLocation, overwritable);
+        return saveImage(saveLocation);
     }
 
     // If given save location differs from current save location, keep track of
     // this location as the default to use when using saveImage()
     public boolean saveImage(String outPath){
-        return saveImage(outPath, this.overwritable);
-    }
-
-    public boolean saveImage(boolean overwritable){
-        return saveImage(this.saveLocation, overwritable);
-    }
-
-    // If given save location differs from current save location, keep track of
-    // this location as the default to use when using saveImage()
-    public boolean saveImage(String outPath, boolean overwrite){
         if (saveLocation == null || saveLocation.isEmpty()){
             System.err.println("ERROR: No image destination path given.");
             return false;
@@ -101,14 +80,16 @@ public class ImageSmoother {
 
         try {
             File output = new File(outPath);
-            if (output.exists() && !overwrite){
-                System.err.println("ERROR: Attempting to overwritable existing file when the overwriting option is off.");
-                return false;
-            }
-            else {
-                ImageIO.write(image, "png", output);
-                return true;
-            }
+//            if (output.exists() && !overwrite){
+//                System.err.println("ERROR: Attempting to overwritable existing file when the overwriting option is off.");
+//                return false;
+//            }
+//            else {
+//                ImageIO.write(image, "png", output);
+//                return true;
+//            }
+            ImageIO.write(image, "png", output);
+            return true;
         }
         catch (Exception e){
             System.err.println("ERROR: Could not save file.");
@@ -144,7 +125,6 @@ public class ImageSmoother {
         }
 
     }
-
 
     // recursively get and fill in RGBs
     private int fillEdge(int layer, int row, int col){
@@ -184,31 +164,7 @@ public class ImageSmoother {
     private Color getMedianPixel(BufferedImage image){
         // put every Color in subimage into an array
         Color[] pixels = imageToArray(image);
-        return new QuickSelectStrategy().findMedianColor(pixels);
-        /*
-        // calculate median index
-        int targetIndex = pixels.length/2;
-
-        // selection sort iteratively
-        for (int i = 0; i <= targetIndex; i++) {
-            // Find the minimum element in unsorted array
-            int minIndex = i;
-            for (int j = i+1; j < pixels.length; j++) {
-                int jGray = (pixels[j].getRed() + pixels[j].getBlue() + pixels[j].getGreen()) / 3;
-                int minGray = (pixels[minIndex].getRed() + pixels[minIndex].getBlue() + pixels[minIndex].getGreen()) / 3;
-                if (jGray < minGray)
-                    minIndex = j;
-            }
-
-            // Swap the found minimum element with the first
-            // element
-            Color temp = new Color(pixels[minIndex].getRGB());
-            pixels[minIndex] = new Color(pixels[i].getRGB());
-            pixels[i] = new Color(temp.getRGB());
-        }
-
-        return pixels[targetIndex];
-        */
+        return new QuickSelectStrategy().findColor(pixels, pixels.length/2);
     }
 
     private void createEdges() {
@@ -264,7 +220,7 @@ public class ImageSmoother {
         OrderStatisticTester.testAndPrint(new QuickSortStrategy());
         ImageSmoother smoother = new ImageSmoother(
                 "samples/11.png",
-                "samples/11-4.png", true);
+                "samples/11-5.png");
         if (!smoother.imageExists()) return;
         smoother.smoothImage(5);
         smoother.saveImage();

@@ -1,6 +1,10 @@
 // Written by Ethan Binyaminov
 package Main.OrderStatistic;
 
+import Main.OrderStatistic.Strategies.IterativeSelectStrategy;
+import Main.OrderStatistic.Strategies.QuickSelectStrategy;
+import Main.OrderStatistic.Strategies.QuickSortStrategy;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
@@ -63,10 +67,10 @@ public abstract class OrderStatisticTester {
     }
 
     /**
-     * Test the order statistic methods speed under different
+     * Test and print an order statistic strategy's average runtime under different conditions
      * @return true if test results printed to file
      */
-    public static boolean testAndPrint(OrderStatistic strategy) {
+    public static boolean testAndPrint(OrderStatisticStrategy strategy) {
         double[][] results = new double[RANGE.length][SIZES.length];
         // loop going through each SIZE
         for (int i = 0; i < RANGE.length; i++) {
@@ -80,7 +84,7 @@ public abstract class OrderStatisticTester {
                     int[] arr = randomFill(size, range);
                     int target = ThreadLocalRandom.current().nextInt(0, size);
                     long startTime = System.nanoTime();
-                    int result = strategy.findKthSmallestInt(arr, target);
+                    int result = strategy.findInt(arr, target);
                     long finishTime = System.nanoTime();
                     average += (finishTime - startTime);
                 }
@@ -98,11 +102,15 @@ public abstract class OrderStatisticTester {
         }
     }
 
-    // swap the values of 2 indexes in an array
-    public static void swap(int[] array, int a, int b) {
-        int tmp = array[a];
-        array[a] = array[b];
-        array[b] = tmp;
+    /**
+     * Test and print each order statistic strategy's average runtime under different conditions
+     * @return true if all test results printed to file
+     */
+    public static boolean testAndPrintAll(){
+        boolean allResultsPrinted = true;
+        allResultsPrinted = allResultsPrinted && testAndPrint(new QuickSortStrategy());
+        allResultsPrinted = allResultsPrinted && testAndPrint(new IterativeSelectStrategy());
+        allResultsPrinted = allResultsPrinted && testAndPrint(new QuickSelectStrategy());
+        return allResultsPrinted;
     }
-
 }

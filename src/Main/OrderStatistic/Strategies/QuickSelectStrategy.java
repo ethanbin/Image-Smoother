@@ -1,15 +1,15 @@
 package Main.OrderStatistic.Strategies;
 
 import Main.OrderStatistic.OrderStatisticTester;
-import Main.OrderStatistic.OrderStatistic;
+import Main.OrderStatistic.OrderStatisticStrategy;
 
 import java.awt.*;
 
-public class QuickSelectStrategy extends OrderStatistic {
+public class QuickSelectStrategy extends OrderStatisticStrategy {
     final String HEADER = "ORDER STATISTIC - QUICK SELECT";
 
     @Override
-    public int findKthSmallestInt(int[] arr, int k) {
+    public int findInt(int[] arr, int k) {
         if (k >= arr.length)
             throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(k)  + "th " +
                     "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
@@ -18,6 +18,18 @@ public class QuickSelectStrategy extends OrderStatistic {
                     Integer.toString(k)  + "th smallest number.");
         return quickSelect(arr, 0, arr.length - 1, k);
     }
+
+    @Override
+    public Color findColor(Color [] arr, int k){
+        if (k >= arr.length)
+            throw new ArrayIndexOutOfBoundsException("Requested the " + Integer.toString(k)  + "th " +
+                    "smallest number but the array is only of size " + Integer.toString(arr.length) + ".");
+        else if (k < 0)
+            throw new ArrayIndexOutOfBoundsException("Target value cannot be negative - user requested the " +
+                    Integer.toString(k)  + "th smallest number.");
+        return findColor(arr, 0, arr.length-1, k);
+    }
+
 
     /**
      *
@@ -54,23 +66,21 @@ public class QuickSelectStrategy extends OrderStatistic {
         int j = start;
         for (int i = start; i < end; i++){
             if (arr[i] < pivotValue) {
-                OrderStatisticTester.swap(arr, i, j);
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
                 j++;
             }
         }
         // swap pivot with first element greater than pivot
-        OrderStatisticTester.swap(arr, j, end);
+        int tmp = arr[j];
+        arr[j] = arr[end];
+        arr[end] = tmp;
         return j;
     }
 
-    public Color findMedianColor(Color [] arr){
-        int targetIndex = arr.length/2;
-        return findMedianColor(arr, 0, arr.length-1, targetIndex);
-    }
-
     // start and end are inclusive
-
-    private Color findMedianColor(Color [] arr, int start, int end, int k){
+    private Color findColor(Color [] arr, int start, int end, int k){
         if (start == end)
             return arr[start];
 
@@ -79,9 +89,9 @@ public class QuickSelectStrategy extends OrderStatistic {
         if (pivot == k)
             return arr[pivot];
         else if (pivot > k)
-            return findMedianColor(arr, start, pivot-1, k);
+            return findColor(arr, start, pivot-1, k);
         else
-            return findMedianColor(arr, pivot + 1, end, k);
+            return findColor(arr, pivot + 1, end, k);
 
     }
     
