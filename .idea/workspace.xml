@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="171" />
-    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="117" />
+    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="172" />
+    <bookmark url="file://$PROJECT_DIR$/src/Main/ImageSmoother.java" line="118" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9422378c-5af1-4ed0-a28a-245ff98a604c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_cli_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image-Smoother.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Image-Smoother.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ImageSmoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ImageSmoother.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,38 +25,254 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ImageSmoother.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+            <state relative-caret-position="178">
+              <caret line="262" column="45" lean-forward="true" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+                <element signature="method#ImageSmoother#1;class#ImageSmoother#0" />
                 <element signature="method#openImage#0;class#ImageSmoother#0" />
-                <element signature="e#1884#1885#0" expanded="true" />
-                <element signature="e#1944#1945#0" expanded="true" />
+                <element signature="e#1721#1843#0" />
+                <element signature="n#!!block;n#saveImage#0;n#ImageSmoother#0" />
                 <element signature="method#saveImage#1;class#ImageSmoother#0" />
+                <element signature="e#2181#2293#1" />
+                <element signature="e#2307#2783#0" />
+                <element signature="e#2354#2403#0" />
+                <element signature="e#2811#2911#0" />
                 <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
+                <element signature="e#3063#3413#1" />
+                <element signature="e#3119#3403#1" />
                 <element signature="method#fillEdges#0;class#ImageSmoother#0" />
+                <element signature="e#3525#3665#1" />
+                <element signature="e#3717#3859#1" />
                 <element signature="method#fillEdge#0;class#ImageSmoother#0" />
-                <element signature="e#5156#5219#0" />
+                <element signature="e#4546#4609#0" />
                 <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-                <element signature="e#7179#7193#0" />
-                <element signature="e#8081#8143#0" />
+                <element signature="e#5089#5326#1" />
+                <element signature="e#5146#5316#1" />
+                <element signature="method#getMedianPixel#0;class#ImageSmoother#0" />
+                <element signature="method#createEdges#0;class#ImageSmoother#0" />
+                <element signature="e#5636#5650#0" />
+                <element signature="e#6302#6343#1" />
+                <element signature="e#6538#6600#0" />
                 <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+                <element signature="e#7593#7929#1" />
+                <element signature="e#7676#7919#1" />
+                <element signature="method#printHelp#1;class#ImageSmoother#0" />
+                <element signature="e#8791#8849#0" />
+                <element signature="e#9788#10417#0" />
+                <element signature="e#9523#9568#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IterativeSelectStrategy.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/IterativeSelectStrategy.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/lang/String.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+            <state relative-caret-position="299">
+              <caret line="460" column="15" selection-start-line="460" selection-start-column="15" selection-end-line="460" selection-end-column="15" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#findInt#0;class#IterativeSelectStrategy#0" />
-                <element signature="method#findColor#0;class#IterativeSelectStrategy#0" />
+                <element signature="e#15456#15457#0" expanded="true" />
+                <element signature="e#15498#15499#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/CommandLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="141" column="18" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/Option.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="228" column="38" lean-forward="true" selection-start-line="228" selection-start-column="38" selection-end-line="228" selection-end-column="38" />
+              <folding>
+                <element signature="docComment;class#Option#0" />
+                <element signature="e#1723#1806#0" />
+                <element signature="e#1860#1932#0" />
+                <element signature="e#1989#2019#0" />
+                <element signature="e#2078#2107#0" />
+                <element signature="e#2143#2187#0" />
+                <element signature="e#2221#2268#0" />
+                <element signature="e#2302#2334#0" />
+                <element signature="e#2372#2434#0" />
+                <element signature="e#2470#2540#0" />
+                <element signature="e#2579#2636#0" />
+                <element signature="e#2688#2718#0" />
+                <element signature="e#2766#2801#0" />
+                <element signature="e#2866#2914#0" />
+                <element signature="e#2947#3084#0" />
+                <element signature="e#2947#3514#0" />
+                <element signature="e#3524#3880#0" />
+                <element signature="e#3524#4019#0" />
+                <element signature="e#4025#4411#0" />
+                <element signature="e#4025#4567#0" />
+                <element signature="e#4573#5019#0" />
+                <element signature="e#4573#5480#0" />
+                <element signature="e#5387#5433#1" />
+                <element signature="e#5486#5696#0" />
+                <element signature="e#5772#5884#0" />
+                <element signature="e#5772#6018#0" />
+                <element signature="e#6024#6329#0" />
+                <element signature="e#6394#6493#0" />
+                <element signature="e#6526#6527#0" expanded="true" />
+                <element signature="e#6553#6554#0" expanded="true" />
+                <element signature="e#7134#7135#0" expanded="true" />
+                <element signature="e#7166#7167#0" expanded="true" />
+                <element signature="e#7173#7313#0" />
+                <element signature="e#7386#7497#0" />
+                <element signature="e#7590#7764#0" />
+                <element signature="e#7874#7950#0" />
+                <element signature="e#8032#8166#0" />
+                <element signature="e#8248#8389#0" />
+                <element signature="e#8504#8640#0" />
+                <element signature="e#8721#8874#0" />
+                <element signature="e#8983#9122#0" />
+                <element signature="e#9197#9327#0" />
+                <element signature="e#9425#9559#0" />
+                <element signature="e#9652#9779#0" />
+                <element signature="e#9852#10019#0" />
+                <element signature="e#10125#10271#0" />
+                <element signature="e#10387#10518#0" />
+                <element signature="e#10602#10789#0" />
+                <element signature="e#10880#10990#0" />
+                <element signature="e#11069#11241#0" />
+                <element signature="e#11327#11824#0" />
+                <element signature="e#11896#12013#0" />
+                <element signature="e#11896#12221#0" />
+                <element signature="e#12116#12186#1" />
+                <element signature="e#12227#12634#0" />
+                <element signature="e#12227#13578#0" />
+                <element signature="e#12775#13478#1" />
+                <element signature="e#13062#13468#1" />
+                <element signature="e#13178#13224#1" />
+                <element signature="e#13584#13883#0" />
+                <element signature="e#13584#14100#0" />
+                <element signature="e#13960#14043#1" />
+                <element signature="e#14106#14328#0" />
+                <element signature="e#14428#14851#0" />
+                <element signature="e#14428#14991#0" />
+                <element signature="e#14997#15335#0" />
+                <element signature="e#14997#15486#0" />
+                <element signature="e#15492#15705#0" />
+                <element signature="e#15836#15936#0" />
+                <element signature="e#16017#16126#0" />
+                <element signature="e#16017#16759#0" />
+                <element signature="e#16310#16366#1" />
+                <element signature="e#16425#16472#1" />
+                <element signature="e#16508#16553#1" />
+                <element signature="e#16638#16694#1" />
+                <element signature="e#16765#16885#0" />
+                <element signature="e#16970#17507#0" />
+                <element signature="e#17053#17089#1" />
+                <element signature="e#17151#17188#1" />
+                <element signature="e#17308#17345#1" />
+                <element signature="e#17442#17479#1" />
+                <element signature="e#17513#17729#0" />
+                <element signature="e#17735#18262#0" />
+                <element signature="e#17735#18657#0" />
+                <element signature="e#18329#18478#0" />
+                <element signature="e#18535#18651#0" />
+                <element signature="e#18663#18907#0" />
+                <element signature="e#18972#19337#0" />
+                <element signature="e#18972#19597#0" />
+                <element signature="e#19603#19761#0" />
+                <element signature="e#19603#19913#0" />
+                <element signature="e#19919#20086#0" />
+                <element signature="e#19919#20327#0" />
+                <element signature="e#20152#20189#1" />
+                <element signature="e#20244#20292#1" />
+                <element signature="e#20337#20517#0" />
+                <element signature="e#20605#20937#0" />
+                <element signature="e#21044#21368#0" />
+                <element signature="e#21044#28347#0" />
+                <element signature="e#21422#21451#0" />
+                <element signature="e#21495#21527#0" />
+                <element signature="e#21573#21617#0" />
+                <element signature="e#21659#21706#0" />
+                <element signature="e#21748#21810#0" />
+                <element signature="e#21854#21924#0" />
+                <element signature="e#21971#22028#0" />
+                <element signature="e#22088#22118#0" />
+                <element signature="e#22174#22222#0" />
+                <element signature="e#22263#22585#0" />
+                <element signature="e#22263#22756#0" />
+                <element signature="e#22774#22982#0" />
+                <element signature="e#22774#23116#0" />
+                <element signature="e#23126#23320#0" />
+                <element signature="e#23126#23463#0" />
+                <element signature="e#23473#23656#0" />
+                <element signature="e#23473#23798#0" />
+                <element signature="e#23816#24029#0" />
+                <element signature="e#23816#24188#0" />
+                <element signature="e#24206#24456#0" />
+                <element signature="e#24206#24605#0" />
+                <element signature="e#24623#24749#0" />
+                <element signature="e#24848#25050#0" />
+                <element signature="e#24848#25189#0" />
+                <element signature="e#25207#25377#0" />
+                <element signature="e#25207#25501#0" />
+                <element signature="e#25511#25669#0" />
+                <element signature="e#25779#26658#0" />
+                <element signature="e#25779#26785#0" />
+                <element signature="e#26803#26951#0" />
+                <element signature="e#27046#27269#0" />
+                <element signature="e#27046#27525#0" />
+                <element signature="e#27535#27693#0" />
+                <element signature="e#27535#27823#0" />
+                <element signature="e#27833#28083#0" />
+                <element signature="e#27833#28341#0" />
+                <element signature="e#28184#28294#1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/CommandLineParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/ParseException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/HelpFormatter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1326">
+              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+              <folding>
+                <element signature="method#partition#1;class#QuickSelectStrategy#0" />
               </folding>
             </state>
           </provider>
@@ -74,6 +292,7 @@
       <find>*</find>
       <find>partition</find>
       <find>quickSelect</find>
+      <find>type</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,32 +307,24 @@
         <option value="$PROJECT_DIR$/src/Main/NoiseSmoother.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic/QuickSelectStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticStrategy.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortBaseStrategy.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectBaseStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/IterativeSelectStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticTester.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticBaseStrategy.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatistic.java" />
-        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticStrategy.java" />
-        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticTester.java" />
-        <option value="$PROJECT_DIR$/src/Main/ImageSmoother.java" />
-        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/IterativeSelectStrategy.java" />
         <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectStrategy.java" />
-        <option value="$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortStrategy.java" />
+        <option value="$PROJECT_DIR$/src/Main/ImageSmoother.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1294" />
-    <option name="height" value="1407" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="292" />
+    <option name="y" value="21" />
+    <option name="width" value="697" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,7 +332,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,32 +357,26 @@
               <item name="Main" type="462c0819:PsiDirectoryNode" />
               <item name="OrderStatistic" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Image-Smoother" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Image-Smoother" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-              <item name="OrderStatistic" type="462c0819:PsiDirectoryNode" />
-              <item name="Strategies" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544476940659" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -187,21 +391,27 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ImageSmoother" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="10" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main.ImageSmoother" />
       <module name="Image-Smoother" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="-w 3 -i samples/11.png -o samples/11-3.png" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Main.*" />
+          <option name="PATTERN" value="Main.OrderStatistic.Strategies.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="10" />
@@ -209,44 +419,23 @@
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="Image-Smoother" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
@@ -269,470 +458,83 @@
       <workItem from="1542763227073" duration="6570000" />
       <workItem from="1543773333326" duration="24021000" />
       <workItem from="1543879686117" duration="8954000" />
-      <workItem from="1544161948746" duration="10460000" />
+      <workItem from="1544161948746" duration="2223000" />
+      <workItem from="1544471838702" duration="5000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121828000" />
+    <option name="totallyTimeSpent" value="119689000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.2647059" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14818764" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="right" id="Run" order="10" weight="0.29029733" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29812208" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info id="Learn" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" id="Debug" order="11" weight="0.5610329" />
-      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980332" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980332" />
+      <window_info anchor="right" id="Run" order="10" weight="0.41364604" />
+      <window_info anchor="right" id="Messages" order="11" weight="0.32889125" />
+      <window_info anchor="right" id="Debug" order="12" weight="0.35660982" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="2" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DirectColorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="720" selection-start-line="720" selection-end-line="720" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/WritableRaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="282" column="29" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="133" column="53" lean-forward="true" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="1014" column="16" selection-start-line="1014" selection-start-column="16" selection-end-line="1014" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1049">
-          <caret line="219" column="27" selection-start-line="219" selection-start-column="27" selection-end-line="219" selection-end-column="27" />
-          <folding>
-            <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="method#saveImage#1;class#ImageSmoother#0" />
-            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdges#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdge#0;class#ImageSmoother#0" />
-            <element signature="e#5156#5219#0" />
-            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="e#7179#7193#0" />
-            <element signature="e#8081#8143#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" column="5" lean-forward="true" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
-          <folding>
-            <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="method#saveImage#1;class#ImageSmoother#0" />
-            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdges#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdge#0;class#ImageSmoother#0" />
-            <element signature="e#5156#5219#0" />
-            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="e#7179#7193#0" />
-            <element signature="e#8081#8143#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18496">
-          <caret line="1088" lean-forward="true" selection-start-line="1088" selection-end-line="1088" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="125" column="13" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/WritableRaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DirectColorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11730">
-          <caret line="720" selection-start-line="720" selection-end-line="720" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3162">
-          <caret line="226" selection-start-line="226" selection-end-line="226" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-          <folding>
-            <element signature="method#printResults#0;class#OrderStatistic#0" />
-            <element signature="method#iterativeSelection#0;class#OrderStatistic#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="140" column="8" lean-forward="true" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
-          <folding>
-            <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="method#saveImage#1;class#ImageSmoother#0" />
-            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdges#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdge#0;class#ImageSmoother#0" />
-            <element signature="e#5156#5219#0" />
-            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="e#7179#7193#0" />
-            <element signature="e#8081#8143#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="107" column="9" lean-forward="true" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
-          <folding>
-            <element signature="method#printResults#0;class#OrderStatistic#0" />
-            <element signature="method#iterativeSelection#0;class#OrderStatistic#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="method#saveImage#1;class#ImageSmoother#0" />
-            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdges#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdge#0;class#ImageSmoother#0" />
-            <element signature="e#5156#5219#0" />
-            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="e#7179#7193#0" />
-            <element signature="e#8081#8143#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/concurrent/ThreadLocalRandom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="334" column="15" selection-start-line="334" selection-start-column="15" selection-end-line="334" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="273" column="11" selection-start-line="273" selection-start-column="11" selection-end-line="273" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DirectColorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11730">
-          <caret line="720" selection-start-line="720" selection-end-line="720" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/SampleModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8330">
-          <caret line="533" column="25" selection-start-line="533" selection-start-column="25" selection-end-line="533" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/WritableRaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="282" column="29" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBufferByte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2788">
-          <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2958">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16405">
-          <caret line="1014" column="16" selection-start-line="1014" selection-start-column="16" selection-end-line="1014" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/ArrayIndexOutOfBoundsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="method#printResults#0;class#OrderStatistic#0" />
-            <element signature="method#iterativeSelection#0;class#OrderStatistic#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3489">
-          <caret line="266" column="41" selection-start-line="266" selection-start-column="41" selection-end-line="266" selection-end-column="41" />
-          <folding>
-            <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="method#saveImage#1;class#ImageSmoother#0" />
-            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdges#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdge#0;class#ImageSmoother#0" />
-            <element signature="e#5156#5219#0" />
-            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="e#7179#7193#0" />
-            <element signature="e#8081#8143#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/concurrent/ThreadLocalRandom.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/io/File.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DirectColorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11730">
-          <caret line="720" selection-start-line="720" selection-end-line="720" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DirectColorModel.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBuffer.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/SampleModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8330">
-          <caret line="533" column="25" selection-start-line="533" selection-start-column="25" selection-end-line="533" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/WritableRaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="282" column="29" selection-start-line="282" selection-start-column="29" selection-end-line="282" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBufferByte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2788">
-          <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16405">
-          <caret line="1014" column="16" selection-start-line="1014" selection-start-column="16" selection-end-line="1014" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/ArrayIndexOutOfBoundsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/Raster.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/SampleModel.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/WritableRaster.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/DataBufferByte.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/ArrayIndexOutOfBoundsException.java" />
     <entry file="file://$PROJECT_DIR$/results.csv">
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/util/concurrent/ThreadLocalRandom.class" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/sun/awt/image/IntegerInterleavedRaster.java">
+    <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/util/concurrent/ThreadLocalRandom.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        <state relative-caret-position="282">
+          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticTester.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/IterativeSelectStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="105" column="51" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+        <state relative-caret-position="85">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
           <folding>
-            <element signature="docComment;method#randomFill#0;class#OrderStatisticTester#0" />
-            <element signature="method#randomFill#0;class#OrderStatisticTester#0" />
-            <element signature="method#printResults#0;class#OrderStatisticTester#0" />
-            <element signature="e#1461#1496#0" />
-            <element signature="method#testAndPrint#0;class#OrderStatisticTester#0" />
-            <element signature="method#testAndPrintAll#0;class#OrderStatisticTester#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-          <folding>
-            <element signature="method#openImage#0;class#ImageSmoother#0" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="method#saveImage#1;class#ImageSmoother#0" />
-            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdges#0;class#ImageSmoother#0" />
-            <element signature="method#fillEdge#0;class#ImageSmoother#0" />
-            <element signature="e#5156#5219#0" />
-            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
-            <element signature="e#7179#7193#0" />
-            <element signature="e#8081#8143#0" />
-            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -740,40 +542,266 @@
     <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSortStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="63" lean-forward="true" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+          <caret line="7" column="27" selection-start-line="7" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#findKthSmallestInt#0;class#QuickSortStrategy#0" />
-            <element signature="method#findColor#0;class#QuickSortStrategy#0" />
-            <element signature="method#partition#0;class#QuickSortStrategy#0" />
-            <element signature="method#quickSort#0;class#QuickSortStrategy#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatistic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/OrderStatisticTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="81" column="26" selection-start-line="81" selection-end-line="82" />
+          <folding>
+            <element signature="docComment;method#randomFill#0;class#OrderStatistic#0" />
+            <element signature="method#randomFill#0;class#OrderStatistic#0" />
+            <element signature="method#printResults#0;class#OrderStatistic#0" />
+            <element signature="method#swap#0;class#OrderStatistic#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/QuickSelectStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="93" column="53" lean-forward="true" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+        <state relative-caret-position="1326">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
           <folding>
-            <element signature="method#findInt#0;class#QuickSelectStrategy#0" />
-            <element signature="docComment;method#quickSelect#0;class#QuickSelectStrategy#0" />
-            <element signature="method#quickSelect#0;class#QuickSelectStrategy#0" />
-            <element signature="docComment;method#partition#0;class#QuickSelectStrategy#0" />
-            <element signature="method#partition#0;class#QuickSelectStrategy#0" />
             <element signature="method#partition#1;class#QuickSelectStrategy#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/OrderStatistic/Strategies/IterativeSelectStrategy.java">
+    <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/HelpFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+        <state relative-caret-position="748">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/ParseException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/CommandLineParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/CommandLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="141" column="18" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar!/org/apache/commons/cli/Option.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="228" column="38" lean-forward="true" selection-start-line="228" selection-start-column="38" selection-end-line="228" selection-end-column="38" />
+          <folding>
+            <element signature="docComment;class#Option#0" />
+            <element signature="e#1723#1806#0" />
+            <element signature="e#1860#1932#0" />
+            <element signature="e#1989#2019#0" />
+            <element signature="e#2078#2107#0" />
+            <element signature="e#2143#2187#0" />
+            <element signature="e#2221#2268#0" />
+            <element signature="e#2302#2334#0" />
+            <element signature="e#2372#2434#0" />
+            <element signature="e#2470#2540#0" />
+            <element signature="e#2579#2636#0" />
+            <element signature="e#2688#2718#0" />
+            <element signature="e#2766#2801#0" />
+            <element signature="e#2866#2914#0" />
+            <element signature="e#2947#3084#0" />
+            <element signature="e#2947#3514#0" />
+            <element signature="e#3524#3880#0" />
+            <element signature="e#3524#4019#0" />
+            <element signature="e#4025#4411#0" />
+            <element signature="e#4025#4567#0" />
+            <element signature="e#4573#5019#0" />
+            <element signature="e#4573#5480#0" />
+            <element signature="e#5387#5433#1" />
+            <element signature="e#5486#5696#0" />
+            <element signature="e#5772#5884#0" />
+            <element signature="e#5772#6018#0" />
+            <element signature="e#6024#6329#0" />
+            <element signature="e#6394#6493#0" />
+            <element signature="e#6526#6527#0" expanded="true" />
+            <element signature="e#6553#6554#0" expanded="true" />
+            <element signature="e#7134#7135#0" expanded="true" />
+            <element signature="e#7166#7167#0" expanded="true" />
+            <element signature="e#7173#7313#0" />
+            <element signature="e#7386#7497#0" />
+            <element signature="e#7590#7764#0" />
+            <element signature="e#7874#7950#0" />
+            <element signature="e#8032#8166#0" />
+            <element signature="e#8248#8389#0" />
+            <element signature="e#8504#8640#0" />
+            <element signature="e#8721#8874#0" />
+            <element signature="e#8983#9122#0" />
+            <element signature="e#9197#9327#0" />
+            <element signature="e#9425#9559#0" />
+            <element signature="e#9652#9779#0" />
+            <element signature="e#9852#10019#0" />
+            <element signature="e#10125#10271#0" />
+            <element signature="e#10387#10518#0" />
+            <element signature="e#10602#10789#0" />
+            <element signature="e#10880#10990#0" />
+            <element signature="e#11069#11241#0" />
+            <element signature="e#11327#11824#0" />
+            <element signature="e#11896#12013#0" />
+            <element signature="e#11896#12221#0" />
+            <element signature="e#12116#12186#1" />
+            <element signature="e#12227#12634#0" />
+            <element signature="e#12227#13578#0" />
+            <element signature="e#12775#13478#1" />
+            <element signature="e#13062#13468#1" />
+            <element signature="e#13178#13224#1" />
+            <element signature="e#13584#13883#0" />
+            <element signature="e#13584#14100#0" />
+            <element signature="e#13960#14043#1" />
+            <element signature="e#14106#14328#0" />
+            <element signature="e#14428#14851#0" />
+            <element signature="e#14428#14991#0" />
+            <element signature="e#14997#15335#0" />
+            <element signature="e#14997#15486#0" />
+            <element signature="e#15492#15705#0" />
+            <element signature="e#15836#15936#0" />
+            <element signature="e#16017#16126#0" />
+            <element signature="e#16017#16759#0" />
+            <element signature="e#16310#16366#1" />
+            <element signature="e#16425#16472#1" />
+            <element signature="e#16508#16553#1" />
+            <element signature="e#16638#16694#1" />
+            <element signature="e#16765#16885#0" />
+            <element signature="e#16970#17507#0" />
+            <element signature="e#17053#17089#1" />
+            <element signature="e#17151#17188#1" />
+            <element signature="e#17308#17345#1" />
+            <element signature="e#17442#17479#1" />
+            <element signature="e#17513#17729#0" />
+            <element signature="e#17735#18262#0" />
+            <element signature="e#17735#18657#0" />
+            <element signature="e#18329#18478#0" />
+            <element signature="e#18535#18651#0" />
+            <element signature="e#18663#18907#0" />
+            <element signature="e#18972#19337#0" />
+            <element signature="e#18972#19597#0" />
+            <element signature="e#19603#19761#0" />
+            <element signature="e#19603#19913#0" />
+            <element signature="e#19919#20086#0" />
+            <element signature="e#19919#20327#0" />
+            <element signature="e#20152#20189#1" />
+            <element signature="e#20244#20292#1" />
+            <element signature="e#20337#20517#0" />
+            <element signature="e#20605#20937#0" />
+            <element signature="e#21044#21368#0" />
+            <element signature="e#21044#28347#0" />
+            <element signature="e#21422#21451#0" />
+            <element signature="e#21495#21527#0" />
+            <element signature="e#21573#21617#0" />
+            <element signature="e#21659#21706#0" />
+            <element signature="e#21748#21810#0" />
+            <element signature="e#21854#21924#0" />
+            <element signature="e#21971#22028#0" />
+            <element signature="e#22088#22118#0" />
+            <element signature="e#22174#22222#0" />
+            <element signature="e#22263#22585#0" />
+            <element signature="e#22263#22756#0" />
+            <element signature="e#22774#22982#0" />
+            <element signature="e#22774#23116#0" />
+            <element signature="e#23126#23320#0" />
+            <element signature="e#23126#23463#0" />
+            <element signature="e#23473#23656#0" />
+            <element signature="e#23473#23798#0" />
+            <element signature="e#23816#24029#0" />
+            <element signature="e#23816#24188#0" />
+            <element signature="e#24206#24456#0" />
+            <element signature="e#24206#24605#0" />
+            <element signature="e#24623#24749#0" />
+            <element signature="e#24848#25050#0" />
+            <element signature="e#24848#25189#0" />
+            <element signature="e#25207#25377#0" />
+            <element signature="e#25207#25501#0" />
+            <element signature="e#25511#25669#0" />
+            <element signature="e#25779#26658#0" />
+            <element signature="e#25779#26785#0" />
+            <element signature="e#26803#26951#0" />
+            <element signature="e#27046#27269#0" />
+            <element signature="e#27046#27525#0" />
+            <element signature="e#27535#27693#0" />
+            <element signature="e#27535#27823#0" />
+            <element signature="e#27833#28083#0" />
+            <element signature="e#27833#28341#0" />
+            <element signature="e#28184#28294#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-11.0.1!/java.base/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="460" column="15" selection-start-line="460" selection-start-column="15" selection-end-line="460" selection-end-column="15" />
+          <folding>
+            <element signature="e#15456#15457#0" expanded="true" />
+            <element signature="e#15498#15499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/ImageSmoother.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="262" column="45" lean-forward="true" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#findInt#0;class#IterativeSelectStrategy#0" />
-            <element signature="method#findColor#0;class#IterativeSelectStrategy#0" />
+            <element signature="method#ImageSmoother#0;class#ImageSmoother#0" />
+            <element signature="method#ImageSmoother#1;class#ImageSmoother#0" />
+            <element signature="method#openImage#0;class#ImageSmoother#0" />
+            <element signature="e#1721#1843#0" />
+            <element signature="n#!!block;n#saveImage#0;n#ImageSmoother#0" />
+            <element signature="method#saveImage#1;class#ImageSmoother#0" />
+            <element signature="e#2181#2293#1" />
+            <element signature="e#2307#2783#0" />
+            <element signature="e#2354#2403#0" />
+            <element signature="e#2811#2911#0" />
+            <element signature="method#greyscaleImage#0;class#ImageSmoother#0" />
+            <element signature="e#3063#3413#1" />
+            <element signature="e#3119#3403#1" />
+            <element signature="method#fillEdges#0;class#ImageSmoother#0" />
+            <element signature="e#3525#3665#1" />
+            <element signature="e#3717#3859#1" />
+            <element signature="method#fillEdge#0;class#ImageSmoother#0" />
+            <element signature="e#4546#4609#0" />
+            <element signature="method#imageToArray#0;class#ImageSmoother#0" />
+            <element signature="e#5089#5326#1" />
+            <element signature="e#5146#5316#1" />
+            <element signature="method#getMedianPixel#0;class#ImageSmoother#0" />
+            <element signature="method#createEdges#0;class#ImageSmoother#0" />
+            <element signature="e#5636#5650#0" />
+            <element signature="e#6302#6343#1" />
+            <element signature="e#6538#6600#0" />
+            <element signature="method#smoothImage#0;class#ImageSmoother#0" />
+            <element signature="e#7593#7929#1" />
+            <element signature="e#7676#7919#1" />
+            <element signature="method#printHelp#1;class#ImageSmoother#0" />
+            <element signature="e#8791#8849#0" />
+            <element signature="e#9788#10417#0" />
+            <element signature="e#9523#9568#0" />
           </folding>
         </state>
       </provider>
@@ -818,7 +846,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -835,7 +863,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -855,6 +882,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>commons-cli-1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.io.File;
+import org.apache.commons.cli.*;
 
 public class ImageSmoother {
     private boolean imageExists;
@@ -215,14 +216,104 @@ public class ImageSmoother {
                 image.getWidth() - windowSize + 1, image.getHeight() - windowSize + 1);
     }
 
+    private static void printHelp(Options options){
+        printHelp(null, options);
+    }
+
+    private static void printHelp(String message, Options options){
+        if (message != null && !message.isEmpty())
+            System.err.println(message);
+        HelpFormatter hf = new HelpFormatter();
+        hf.printHelp("Image Smoother using the Median Filter", options);
+        return;
+    }
+
     public static void main(String[] args) {
-        OrderStatisticTester.testAndPrint(new QuickSelectStrategy());
-        OrderStatisticTester.testAndPrint(new QuickSortStrategy());
-        ImageSmoother smoother = new ImageSmoother(
-                "samples/11.png",
-                "samples/11-5.png");
-        if (!smoother.imageExists()) return;
-        smoother.smoothImage(5);
+        Options options = new Options();
+
+        Option optionInput = new Option("i", "input", true, "required input file path");
+//        optionInput.setRequired(true);
+        options.addOption(optionInput);
+
+        Option optionOutput = new Option("o", "output", true, "required output file path");
+//        optionOutput.setRequired(true);
+        options.addOption(optionOutput);
+
+        Option optionWindowSize = new Option("w", "windowSize", true,
+                "required window size, must be an odd number, must be an integer");
+//        optionWindowSize.setRequired(true);
+        options.addOption(optionWindowSize);
+
+        Option testOrderStatistic = new Option("t", "test", false,
+                "Test and compare different order statistic implementations and print results to results.csv");
+        options.addOption(testOrderStatistic);
+
+        CommandLineParser parser = new DefaultParser();
+        CommandLine cmd;
+
+        try {
+            cmd = parser.parse(options, args);
+        } catch (ParseException e) {
+            printHelp("Missing or Invalid Argument(s).", options);
+            return;
+        }
+
+        // if test option was used
+        if (cmd.hasOption(testOrderStatistic.getOpt())){
+            System.out.println("Testing...");
+            OrderStatisticTester.testAndPrintAll();
+            System.out.println("Done.");
+        }
+
+        String inputPath = cmd.getOptionValue(optionInput.getOpt());
+        if (inputPath == null || inputPath.isEmpty()){
+            printHelp("No input path given", options);
+            return;
+        }
+
+        String outputPath = cmd.getOptionValue((optionOutput.getOpt()));
+        if (outputPath == null || outputPath.isEmpty()){
+            printHelp("No output path given", options);
+            return;
+        }
+
+        // get window size. if it's not a number, integer, odd, or above 1, print error message, show help menu, and exit
+        int windowSize = 0;
+        try {
+            String windowOptionValue = cmd.getOptionValue(optionWindowSize.getOpt());
+            if (windowOptionValue.indexOf('.') >= 0){
+                printHelp("Window Size given is not an integer.", options);
+                return;
+            }
+            windowSize = Integer.parseInt(windowOptionValue);
+            if (windowSize % 2 == 0){
+                printHelp("Window Size must be odd.", options);
+                return;
+            }
+            else if (windowSize <= 0){
+                printHelp("Window Size must be greater than 1", options);
+                return;
+            }
+        }
+        catch (Exception e)
+        {
+            printHelp("Window Size must be an integer number.", options);
+            return;
+        }
+
+        System.out.println("Smoothing image...");
+        ImageSmoother smoother = new ImageSmoother(inputPath, outputPath);
+        smoother.smoothImage(windowSize);
         smoother.saveImage();
+        System.out.println("Done.");
+
+//        OrderStatisticTester.testAndPrint(new QuickSelectStrategy());
+//        OrderStatisticTester.testAndPrint(new QuickSortStrategy());
+//        ImageSmoother smoother = new ImageSmoother(
+//                "samples/11.png",
+//                "samples/11-5.png");
+//        if (!smoother.imageExists()) return;
+//        smoother.smoothImage(5);
+//        smoother.saveImage();
     }
 }
