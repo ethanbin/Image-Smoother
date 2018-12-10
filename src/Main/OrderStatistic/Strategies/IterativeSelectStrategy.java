@@ -5,7 +5,9 @@ import Main.OrderStatistic.OrderStatisticStrategy;
 import java.awt.*;
 
 public class IterativeSelectStrategy extends OrderStatisticStrategy {
-    final String HEADER = "ORDER STATISTIC - ITERATIVE SELECTION";
+    public IterativeSelectStrategy() {
+        super.HEADER = "ORDER STATISTIC - ITERATIVE SELECTION";
+    }
 
     @Override
     public int findInt(int [] arr, int targetIndex){

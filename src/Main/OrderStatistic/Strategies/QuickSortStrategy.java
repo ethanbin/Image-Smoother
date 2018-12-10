@@ -6,7 +6,9 @@ import java.awt.*;
 import java.util.Arrays;
 
 public class QuickSortStrategy extends OrderStatisticStrategy {
-    final String HEADER = "ORDER STATISTIC - QUICK SORT";
+    public QuickSortStrategy() {
+         super.HEADER = "ORDER STATISTIC - QUICK SORT";
+    }
 
     @Override
     public int findInt(int [] arr, int k){

@@ -6,7 +6,9 @@ import Main.OrderStatistic.OrderStatisticStrategy;
 import java.awt.*;
 
 public class QuickSelectStrategy extends OrderStatisticStrategy {
-    final String HEADER = "ORDER STATISTIC - QUICK SELECT";
+    public QuickSelectStrategy() {
+        this.HEADER = "ORDER STATISTIC - QUICK SELECT";
+    }
 
     @Override
     public int findInt(int[] arr, int k) {
