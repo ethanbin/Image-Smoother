@@ -165,7 +165,7 @@ public class ImageSmoother {
     private Color getMedianPixel(BufferedImage image){
         // put every Color in subimage into an array
         Color[] pixels = imageToArray(image);
-        return new QuickSelectStrategy().findColor(pixels, pixels.length/2);
+        return orderStat.findColor(pixels, pixels.length/2);
     }
 
     private void createEdges() {
