@@ -10,6 +10,10 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.cli.*;
 
 public class ImageSmoother {
@@ -223,6 +227,47 @@ public class ImageSmoother {
                 image.getWidth() - windowSize + 1, image.getHeight() - windowSize + 1);
     }
 
+    public void smoothImageMultithreaded(int subsize, int timeout){
+        windowSize = subsize;
+        createEdges();
+        // create new buffered image to hold resulting smoothed image
+        BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+
+        int availableThreadCount = Runtime.getRuntime().availableProcessors() - Thread.activeCount();
+        ExecutorService es = Executors.newFixedThreadPool(availableThreadCount);
+
+        // for each pixel of the image, excluding the edges, add to smoothedImage the
+        // median of the window where that pixel is the center
+        for (int i = windowSize/2; i < image.getHeight() - windowSize/2; i++) {
+            for (int j = windowSize/2; j < image.getWidth() - windowSize/2; j++) {
+                final int iFinal = i;
+                final int jFinal = j;
+                Runnable task = () -> smoothPixel(image, smoothedImage, iFinal, jFinal);
+                Thread thread = new Thread(task);
+                es.execute(thread);
+            }
+        }
+        // busy wait to finish all threads
+        es.shutdown();
+        try {
+            es.awaitTermination(timeout, TimeUnit.SECONDS);
+        }
+        catch (Exception e) {}
+        //while (!es.isTerminated()){}
+
+        // set image to smoothed image
+        image = smoothedImage.getSubimage(windowSize/2,windowSize/2,
+                image.getWidth() - windowSize + 1, image.getHeight() - windowSize + 1);
+    }
+
+    private void smoothPixel(BufferedImage noisy, BufferedImage smooth, int i, int j){
+        // get window
+        noisy = noisy.getSubimage(j - windowSize / 2, i - windowSize / 2, windowSize, windowSize);
+        // get median pixel of window and use it to fill in matching position in smoothed image
+        smooth.setRGB(j,i, getMedianPixel(noisy).getRGB());
+
+    }
+
     private static void printHelp(Options options){
         printHelp(null, options);
     }
@@ -254,6 +299,18 @@ public class ImageSmoother {
         Option testOrderStatistic = new Option("t", "test", false,
                 "Test and compare different order statistic implementations and print results to results.csv");
         options.addOption(testOrderStatistic);
+
+        Option multithread = new Option("m", "multithread", false,
+                "Run image processing on multiple threads.");
+        options.addOption(multithread);
+
+        Option multithreadTime = new Option("s", "seconds", true,
+                "Number of seconds before timing out on multithreaded process, required if multithreading.");
+        options.addOption(multithreadTime);
+
+        Option detailed = new Option("d", "detailed", false,
+                "Print more details as the program runs.");
+        options.addOption(detailed);
 
         CommandLineParser parser = new DefaultParser();
         CommandLine cmd;
@@ -309,11 +366,45 @@ public class ImageSmoother {
             return;
         }
 
+        boolean runMultithreaded = cmd.hasOption(multithread.getOpt());
+        int timeout = -1;
+        if (runMultithreaded) {
+            try {
+                String timeoutValue;
+                timeoutValue = cmd.getOptionValue(multithreadTime.getOpt());
+                if (timeoutValue.indexOf('.') >= 0) {
+                    printHelp("Seconds timeout must be a whole number.", options);
+                    return;
+                }
+                timeout = Integer.parseInt(timeoutValue);
+                if (timeout <= 0) {
+                    printHelp("Seconds timeout must be greater than 0.", options);
+                    return;
+                }
+            } catch (Exception e) {
+                printHelp("Seconds timeout must be a number.", options);
+                e.printStackTrace();
+                return;
+            }
+        }
+
         System.out.println("Smoothing image...");
         ImageSmoother smoother = new ImageSmoother(inputPath, outputPath);
-        smoother.smoothImage(windowSize);
-        smoother.saveImage();
-        System.out.println("Done.");
+
+        long startTime = System.nanoTime();
+        if (runMultithreaded)
+            smoother.smoothImageMultithreaded(windowSize, timeout);
+        else
+            smoother.smoothImage(windowSize);
+        long finishTime = System.nanoTime();
+        System.out.printf("Smoothed in %d nanoseconds.%n", (finishTime - startTime));
+            smoother.saveImage();
+            System.out.println("Done.");
+
+//        smoother.smoothImage(windowSize);
+//        smoother.smoothImageMultithreaded(windowSize);
+//        System.out.println(finishTime - startTime);
+
 
 //        OrderStatisticTester.testAndPrint(new QuickSelectStrategy());
 //        OrderStatisticTester.testAndPrint(new QuickSortStrategy());
