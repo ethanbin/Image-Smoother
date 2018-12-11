@@ -129,6 +129,7 @@ public class ImageSmoother {
 
     // recursively get and fill in RGBs
     private int fillEdge(int layer, int row, int col){
+        // if color has sentinel value or we passed the edges and are in the actual image, return color
         if (image.getRGB(col,row) != -1 || layer > windowSize/2)
             return image.getRGB(col,row);
 
@@ -155,7 +156,6 @@ public class ImageSmoother {
         for (int i = 0; i < image.getHeight(); i++) {
             for (int j = 0; j < image.getWidth(); j++) {
                 Color color = new Color(image.getRGB(j,i));
-                // get greyscale value
                 pixels[i*image.getWidth() + j] = color;
             }
         }
@@ -204,14 +204,21 @@ public class ImageSmoother {
     public void smoothImage(int subsize){
         windowSize = subsize;
         createEdges();
+        // create new buffered image to hold resulting smoothed image
         BufferedImage smoothedImage= new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+
+        // for each pixel of the image, excluding the edges, add to smoothedImage the
+        // median of the window where that pixel is the center
         for (int i = windowSize/2; i < image.getHeight() - windowSize/2; i++) {
             for (int j = windowSize/2; j < image.getWidth() - windowSize/2; j++) {
                 BufferedImage subImage;
+                // get window
                 subImage = image.getSubimage(j - windowSize / 2, i - windowSize / 2, windowSize, windowSize);
+                // get median pixel of window and use it to fill in matching position in smoothed image
                 smoothedImage.setRGB(j,i, getMedianPixel(subImage).getRGB());
             }
         }
+        // set image to smoothed image
         image = smoothedImage.getSubimage(windowSize/2,windowSize/2,
                 image.getWidth() - windowSize + 1, image.getHeight() - windowSize + 1);
     }
