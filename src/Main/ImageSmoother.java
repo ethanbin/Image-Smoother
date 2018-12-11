@@ -263,6 +263,7 @@ public class ImageSmoother {
             System.out.println("Testing...");
             OrderStatisticTester.testAndPrintAll();
             System.out.println("Done.");
+            return;
         }
 
         String inputPath = cmd.getOptionValue(optionInput.getOpt());
