@@ -66,7 +66,6 @@ public class ImageSmoother {
         }
         catch (Exception e) {
             image = null;
-            System.err.println("ERROR: Image not found.");
             return false;
         }
     }
@@ -355,7 +354,7 @@ public class ImageSmoother {
                 printHelp("Window Size must be odd.", options);
                 return;
             }
-            else if (windowSize <= 0){
+            else if (windowSize <= 1){
                 printHelp("Window Size must be greater than 1", options);
                 return;
             }
@@ -388,8 +387,13 @@ public class ImageSmoother {
             }
         }
 
-        System.out.println("Smoothing image...");
         ImageSmoother smoother = new ImageSmoother(inputPath, outputPath);
+        if (!smoother.imageExists){
+            System.err.println("Error: File not found.");
+            return;
+        }
+
+        System.out.println("Smoothing image...");
 
         long startTime = System.nanoTime();
         if (runMultithreaded)
@@ -397,10 +401,10 @@ public class ImageSmoother {
         else
             smoother.smoothImage(windowSize);
         long finishTime = System.nanoTime();
-        System.out.printf("Smoothed in %d nanoseconds.%n", (finishTime - startTime));
-            smoother.saveImage();
-            System.out.println("Done.");
-
+        if (cmd.hasOption(detailed.getOpt()))
+            System.out.printf("Smoothed in %d nanoseconds.%n", (finishTime - startTime));
+        smoother.saveImage();
+        System.out.println("Done.");
 //        smoother.smoothImage(windowSize);
 //        smoother.smoothImageMultithreaded(windowSize);
 //        System.out.println(finishTime - startTime);
