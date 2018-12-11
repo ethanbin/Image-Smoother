@@ -98,18 +98,18 @@ public class ImageSmoother {
         }
     }
 
-    // make an image greyscale
-    public BufferedImage greyscaleImage(BufferedImage image){
-        for (int j = 0; j < image.getHeight(); j++){
-            for (int i = 0; i < image.getWidth(); i++){
-                Color color = new Color(image.getRGB(i,j));
-                int average = (color.getRed() + color.getGreen() + color.getBlue())/3;
-                Color grayed = new Color(average, average, average);
-                image.setRGB(i, j, grayed.getRGB());
-            }
-        }
-        return image;
-    }
+//    // make an image greyscale
+//    public BufferedImage greyscaleImage(BufferedImage image){
+//        for (int j = 0; j < image.getHeight(); j++){
+//            for (int i = 0; i < image.getWidth(); i++){
+//                Color color = new Color(image.getRGB(i,j));
+//                int average = (color.getRed() + color.getGreen() + color.getBlue())/3;
+//                Color grayed = new Color(average, average, average);
+//                image.setRGB(i, j, grayed.getRGB());
+//            }
+//        }
+//        return image;
+//    }
 
     private void fillEdges(){
         for (int i = 0; i < image.getHeight(); i++) {
