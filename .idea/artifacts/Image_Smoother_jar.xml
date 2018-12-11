@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Image-Smoother:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Image_Smoother_jar</output-path>
+    <root id="archive" name="Image-Smoother.jar">
+      <element id="module-output" name="Image-Smoother" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-tests.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-javadoc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-cli-1.4-bin/commons-cli-1.4/commons-cli-1.4-test-sources.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
