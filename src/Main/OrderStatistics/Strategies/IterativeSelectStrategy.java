@@ -1,6 +1,5 @@
-package Main.OrderStatistic.Strategies;
-import Main.OrderStatistic.OrderStatisticTester;
-import Main.OrderStatistic.OrderStatisticStrategy;
+package Main.OrderStatistics.Strategies;
+import Main.OrderStatistics.OrderStatisticStrategy;
 
 import java.awt.*;
 

@@ -1,9 +1,9 @@
 // Written by Ethan Binyaminov
-package Main.OrderStatistic;
+package Main.OrderStatistics;
 
-import Main.OrderStatistic.Strategies.IterativeSelectStrategy;
-import Main.OrderStatistic.Strategies.QuickSelectStrategy;
-import Main.OrderStatistic.Strategies.QuickSortStrategy;
+import Main.OrderStatistics.Strategies.IterativeSelectStrategy;
+import Main.OrderStatistics.Strategies.QuickSelectStrategy;
+import Main.OrderStatistics.Strategies.QuickSortStrategy;
 
 import java.io.FileWriter;
 import java.io.IOException;

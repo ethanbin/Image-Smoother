@@ -1,9 +1,8 @@
 package Main;
 
-import Main.OrderStatistic.OrderStatisticStrategy;
-import Main.OrderStatistic.OrderStatisticTester;
-import Main.OrderStatistic.Strategies.QuickSelectStrategy;
-import Main.OrderStatistic.Strategies.QuickSortStrategy;
+import Main.OrderStatistics.OrderStatisticStrategy;
+import Main.OrderStatistics.OrderStatisticTester;
+import Main.OrderStatistics.Strategies.QuickSelectStrategy;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

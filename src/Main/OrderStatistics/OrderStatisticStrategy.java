@@ -1,4 +1,4 @@
-package Main.OrderStatistic;
+package Main.OrderStatistics;
 
 import java.awt.*;
 
